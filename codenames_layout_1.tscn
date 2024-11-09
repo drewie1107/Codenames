@@ -8,8 +8,10 @@
 [ext_resource type="Script" path="res://scripts/Lines.gd" id="6_d46lv"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_sqfys"]
-font_size = 60
+font_size = 70
 font_color = Color(0, 0, 0, 1)
+outline_size = 2
+outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4ao02"]
 
