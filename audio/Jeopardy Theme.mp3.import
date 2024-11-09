@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d18kgumwh8aef"
+path="res://.godot/imported/Jeopardy Theme.mp3-51086de2b799b49a0f5f5f43e84396a2.mp3str"
+
+[deps]
+
+source_file="res://audio/Jeopardy Theme.mp3"
+dest_files=["res://.godot/imported/Jeopardy Theme.mp3-51086de2b799b49a0f5f5f43e84396a2.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

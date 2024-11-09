@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://do5f1wruhyxev"]
+
+[ext_resource type="Texture2D" uid="uid://dsvejggx7mwvf" path="res://cards_layout_1.png" id="1_3oocm"]
+[ext_resource type="Script" path="res://CodenamesGameGeneration.gd" id="2_1s6bm"]
+
+[node name="Node2D" type="TextureRect"]
+anchors_preset = -1
+offset_right = 4032.0
+offset_bottom = 3024.0
+texture = ExtResource("1_3oocm")
+script = ExtResource("2_1s6bm")
+
+[node name="TextEdit" type="TextEdit" parent="."]
+layout_mode = 0
+offset_left = 1844.0
+offset_top = 548.0
+offset_right = 1994.0
+offset_bottom = 598.0
+scale = Vector2(1.99, 1.99)
+placeholder_text = "Insert Text Here"

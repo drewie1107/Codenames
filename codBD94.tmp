@@ -1,0 +1,551 @@
+[gd_scene load_steps=4 format=3 uid="uid://do5f1wruhyxev"]
+
+[ext_resource type="Texture2D" uid="uid://dsvejggx7mwvf" path="res://cards_layout_1.png" id="1_3oocm"]
+[ext_resource type="Script" path="res://Game.gd" id="2_ckwcx"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_sqfys"]
+font_size = 50
+font_color = Color(0, 0, 0, 1)
+
+[node name="Node2D" type="TextureRect"]
+anchors_preset = -1
+offset_left = -82.0
+offset_top = -92.0
+offset_right = 4607.0
+offset_bottom = 2932.0
+scale = Vector2(0.44, 0.44)
+texture = ExtResource("1_3oocm")
+script = ExtResource("2_ckwcx")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 377.273
+offset_top = 302.273
+offset_right = 1129.27
+offset_bottom = 727.273
+flat = true
+
+[node name="Label" type="Label" parent="Button"]
+layout_mode = 0
+offset_left = 72.7273
+offset_top = 247.727
+offset_right = 669.727
+offset_bottom = 342.727
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Insert Text Here"
+label_settings = SubResource("LabelSettings_sqfys")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 1156.82
+offset_top = 315.909
+offset_right = 1908.82
+offset_bottom = 740.909
+flat = true
+
+[node name="Label" type="Label" parent="Button2"]
+layout_mode = 0
+offset_left = 72.7273
+offset_top = 247.727
+offset_right = 669.727
+offset_bottom = 342.727
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Insert Text Here"
+label_settings = SubResource("LabelSettings_sqfys")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Button3" type="Button" parent="."]
+offset_left = 1947.73
+offset_top = 297.727
+offset_right = 2699.73
+offset_bottom = 722.727
+flat = true
+
+[node name="Label" type="Label" parent="Button3"]
+layout_mode = 0
+offset_left = 72.7273
+offset_top = 247.727
+offset_right = 669.727
+offset_bottom = 342.727
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Insert Text Here"
+label_settings = SubResource("LabelSettings_sqfys")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Button4" type="Button" parent="."]
+offset_left = 2768.18
+offset_top = 275.0
+offset_right = 3520.18
+offset_bottom = 700.0
+flat = true
+
+[node name="Label" type="Label" parent="Button4"]
+layout_mode = 0
+offset_left = 72.7273
+offset_top = 247.727
+offset_right = 669.727
+offset_bottom = 342.727
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Insert Text Here"
+label_settings = SubResource("LabelSettings_sqfys")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Button5" type="Button" parent="."]
+offset_left = 3561.36
+offset_top = 268.182
+offset_right = 4313.36
+offset_bottom = 693.182
+flat = true
+
+[node name="Label" type="Label" parent="Button5"]
+layout_mode = 0
+offset_left = 72.7273
+offset_top = 247.727
+offset_right = 669.727
+offset_bottom = 342.727
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Insert Text Here"
+label_settings = SubResource("LabelSettings_sqfys")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Button6" type="Button" parent="."]
+offset_left = 377.273
+offset_top = 777.273
+offset_right = 1129.27
+offset_bottom = 1202.27
+flat = true
+
+[node name="Label" type="Label" parent="Button6"]
+layout_mode = 0
+offset_left = 72.7273
+offset_top = 247.727
+offset_right = 669.727
+offset_bottom = 342.727
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Insert Text Here"
+label_settings = SubResource("LabelSettings_sqfys")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Button7" type="Button" parent="."]
+offset_left = 1172.73
+offset_top = 772.727
+offset_right = 1924.73
+offset_bottom = 1197.73
+flat = true
+
+[node name="Label" type="Label" parent="Button7"]
+layout_mode = 0
+offset_left = 72.7273
+offset_top = 247.727
+offset_right = 669.727
+offset_bottom = 342.727
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Insert Text Here"
+label_settings = SubResource("LabelSettings_sqfys")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Button8" type="Button" parent="."]
+offset_left = 1975.0
+offset_top = 772.727
+offset_right = 2727.0
+offset_bottom = 1197.73
+flat = true
+
+[node name="Label" type="Label" parent="Button8"]
+layout_mode = 0
+offset_left = 72.7273
+offset_top = 247.727
+offset_right = 669.727
+offset_bottom = 342.727
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Insert Text Here"
+label_settings = SubResource("LabelSettings_sqfys")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Button9" type="Button" parent="."]
+offset_left = 2786.36
+offset_top = 729.545
+offset_right = 3538.36
+offset_bottom = 1154.55
+flat = true
+
+[node name="Label" type="Label" parent="Button9"]
+layout_mode = 0
+offset_left = 72.7273
+offset_top = 247.727
+offset_right = 669.727
+offset_bottom = 342.727
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Insert Text Here"
+label_settings = SubResource("LabelSettings_sqfys")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Button10" type="Button" parent="."]
+offset_left = 3600.0
+offset_top = 706.818
+offset_right = 4352.0
+offset_bottom = 1131.82
+flat = true
+
+[node name="Label" type="Label" parent="Button10"]
+layout_mode = 0
+offset_left = 72.7273
+offset_top = 247.727
+offset_right = 669.727
+offset_bottom = 342.727
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Insert Text Here"
+label_settings = SubResource("LabelSettings_sqfys")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Button11" type="Button" parent="."]
+offset_left = 352.273
+offset_top = 1247.73
+offset_right = 1104.27
+offset_bottom = 1672.73
+flat = true
+
+[node name="Label" type="Label" parent="Button11"]
+layout_mode = 0
+offset_left = 72.7273
+offset_top = 247.727
+offset_right = 669.727
+offset_bottom = 342.727
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Insert Text Here"
+label_settings = SubResource("LabelSettings_sqfys")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Button12" type="Button" parent="."]
+offset_left = 1177.27
+offset_top = 1218.18
+offset_right = 1929.27
+offset_bottom = 1643.18
+flat = true
+
+[node name="Label" type="Label" parent="Button12"]
+layout_mode = 0
+offset_left = 72.7273
+offset_top = 247.727
+offset_right = 669.727
+offset_bottom = 342.727
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Insert Text Here"
+label_settings = SubResource("LabelSettings_sqfys")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Button13" type="Button" parent="."]
+offset_left = 1979.55
+offset_top = 1229.55
+offset_right = 2731.55
+offset_bottom = 1654.55
+flat = true
+
+[node name="Label" type="Label" parent="Button13"]
+layout_mode = 0
+offset_left = 72.7273
+offset_top = 247.727
+offset_right = 669.727
+offset_bottom = 342.727
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Insert Text Here"
+label_settings = SubResource("LabelSettings_sqfys")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Button14" type="Button" parent="."]
+offset_left = 2797.73
+offset_top = 1211.36
+offset_right = 3549.73
+offset_bottom = 1636.36
+flat = true
+
+[node name="Label" type="Label" parent="Button14"]
+layout_mode = 0
+offset_left = 72.7273
+offset_top = 247.727
+offset_right = 669.727
+offset_bottom = 342.727
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Insert Text Here"
+label_settings = SubResource("LabelSettings_sqfys")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Button15" type="Button" parent="."]
+offset_left = 3611.36
+offset_top = 1202.27
+offset_right = 4363.36
+offset_bottom = 1627.27
+flat = true
+
+[node name="Label" type="Label" parent="Button15"]
+layout_mode = 0
+offset_left = 72.7273
+offset_top = 247.727
+offset_right = 669.727
+offset_bottom = 342.727
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Insert Text Here"
+label_settings = SubResource("LabelSettings_sqfys")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Button16" type="Button" parent="."]
+offset_left = 345.455
+offset_top = 1715.91
+offset_right = 1097.45
+offset_bottom = 2140.91
+flat = true
+
+[node name="Label" type="Label" parent="Button16"]
+layout_mode = 0
+offset_left = 72.7273
+offset_top = 247.727
+offset_right = 669.727
+offset_bottom = 342.727
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Insert Text Here"
+label_settings = SubResource("LabelSettings_sqfys")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Button17" type="Button" parent="."]
+offset_left = 1154.55
+offset_top = 1690.91
+offset_right = 1906.55
+offset_bottom = 2115.91
+flat = true
+
+[node name="Label" type="Label" parent="Button17"]
+layout_mode = 0
+offset_left = 72.7273
+offset_top = 247.727
+offset_right = 669.727
+offset_bottom = 342.727
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Insert Text Here"
+label_settings = SubResource("LabelSettings_sqfys")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Button18" type="Button" parent="."]
+offset_left = 1945.45
+offset_top = 1690.91
+offset_right = 2697.45
+offset_bottom = 2115.91
+flat = true
+
+[node name="Label" type="Label" parent="Button18"]
+layout_mode = 0
+offset_left = 72.7273
+offset_top = 247.727
+offset_right = 669.727
+offset_bottom = 342.727
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Insert Text Here"
+label_settings = SubResource("LabelSettings_sqfys")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Button19" type="Button" parent="."]
+offset_left = 2781.82
+offset_top = 1690.91
+offset_right = 3533.82
+offset_bottom = 2115.91
+flat = true
+
+[node name="Label" type="Label" parent="Button19"]
+layout_mode = 0
+offset_left = 72.7273
+offset_top = 247.727
+offset_right = 669.727
+offset_bottom = 342.727
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Insert Text Here"
+label_settings = SubResource("LabelSettings_sqfys")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Button20" type="Button" parent="."]
+offset_left = 3597.73
+offset_top = 1709.09
+offset_right = 4349.73
+offset_bottom = 2134.09
+flat = true
+
+[node name="Label" type="Label" parent="Button20"]
+layout_mode = 0
+offset_left = 72.7273
+offset_top = 247.727
+offset_right = 669.727
+offset_bottom = 342.727
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Insert Text Here"
+label_settings = SubResource("LabelSettings_sqfys")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Button21" type="Button" parent="."]
+offset_left = 325.0
+offset_top = 2179.55
+offset_right = 1077.0
+offset_bottom = 2604.55
+flat = true
+
+[node name="Label" type="Label" parent="Button21"]
+layout_mode = 0
+offset_left = 72.7273
+offset_top = 247.727
+offset_right = 669.727
+offset_bottom = 342.727
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Insert Text Here"
+label_settings = SubResource("LabelSettings_sqfys")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Button22" type="Button" parent="."]
+offset_left = 1115.91
+offset_top = 2179.55
+offset_right = 1867.91
+offset_bottom = 2604.55
+flat = true
+
+[node name="Label" type="Label" parent="Button22"]
+layout_mode = 0
+offset_left = 72.7273
+offset_top = 247.727
+offset_right = 669.727
+offset_bottom = 342.727
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Insert Text Here"
+label_settings = SubResource("LabelSettings_sqfys")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Button23" type="Button" parent="."]
+offset_left = 1927.27
+offset_top = 2165.91
+offset_right = 2679.27
+offset_bottom = 2590.91
+flat = true
+
+[node name="Label" type="Label" parent="Button23"]
+layout_mode = 0
+offset_left = 72.7273
+offset_top = 247.727
+offset_right = 669.727
+offset_bottom = 342.727
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Insert Text Here"
+label_settings = SubResource("LabelSettings_sqfys")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Button24" type="Button" parent="."]
+offset_left = 2768.18
+offset_top = 2161.36
+offset_right = 3520.18
+offset_bottom = 2586.36
+flat = true
+
+[node name="Label" type="Label" parent="Button24"]
+layout_mode = 0
+offset_left = 72.7273
+offset_top = 247.727
+offset_right = 669.727
+offset_bottom = 342.727
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Insert Text Here"
+label_settings = SubResource("LabelSettings_sqfys")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Button25" type="Button" parent="."]
+offset_left = 3597.73
+offset_top = 2168.18
+offset_right = 4349.73
+offset_bottom = 2593.18
+flat = true
+
+[node name="Label" type="Label" parent="Button25"]
+layout_mode = 0
+offset_left = 72.7273
+offset_top = 247.727
+offset_right = 669.727
+offset_bottom = 342.727
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Insert Text Here"
+label_settings = SubResource("LabelSettings_sqfys")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 45.0
+one_shot = true
+autostart = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button4" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button5" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button6" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button7" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button8" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button9" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button10" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button11" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button12" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button13" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button14" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button15" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button16" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button17" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button18" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button19" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button20" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button21" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button22" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button23" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button24" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button25" to="." method="_on_button_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
