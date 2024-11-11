@@ -1,17 +1,35 @@
-[gd_scene load_steps=9 format=3 uid="uid://cv481eo02q64o"]
+[gd_scene load_steps=17 format=3 uid="uid://cv481eo02q64o"]
 
 [ext_resource type="Texture2D" uid="uid://dsvejggx7mwvf" path="res://cards_layout_1.png" id="1_3oocm"]
 [ext_resource type="Script" path="res://scripts/Game.gd" id="2_ckwcx"]
 [ext_resource type="Script" path="res://scripts/AudioStreamPlayer.gd" id="3_37h5g"]
 [ext_resource type="Script" path="res://scripts/Button.gd" id="3_jx6nd"]
+[ext_resource type="StyleBox" uid="uid://bhlih2hpc3ngu" path="res://red_button_theme_1.tres" id="5_gpbkl"]
 [ext_resource type="AudioStream" uid="uid://d18kgumwh8aef" path="res://audio/Jeopardy Theme.mp3" id="5_kylop"]
 [ext_resource type="Script" path="res://scripts/Lines.gd" id="6_d46lv"]
+[ext_resource type="Texture2D" uid="uid://dh4r6kqui5kt1" path="res://red_button.png" id="6_vj47y"]
+[ext_resource type="Texture2D" uid="uid://cwjk4h48qjtw5" path="res://blue_button.png" id="7_cr8sj"]
+[ext_resource type="Texture2D" uid="uid://cx3cvtl2hn1w8" path="res://white_button.png" id="8_5tyjw"]
+[ext_resource type="Texture2D" uid="uid://dt4jex6wvadt4" path="res://black_button.png" id="9_2d2c2"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_sqfys"]
 font_size = 70
 font_color = Color(0, 0, 0, 1)
 outline_size = 2
 outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Theme" id="Theme_1o63o"]
+Button/styles/normal = ExtResource("5_gpbkl")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tg6xq"]
+bg_color = Color(0.411765, 0.368627, 0.286275, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="Theme" id="Theme_c2s6o"]
+Button/styles/normal = SubResource("StyleBoxFlat_tg6xq")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4ao02"]
 
@@ -28,7 +46,7 @@ script = ExtResource("2_ckwcx")
 z_index = 10
 script = ExtResource("6_d46lv")
 
-[node name="Button" type="Button" parent="."]
+[node name="Card1" type="Button" parent="."]
 layout_mode = 0
 offset_left = 348.0
 offset_top = 314.0
@@ -37,7 +55,7 @@ offset_bottom = 725.0
 flat = true
 script = ExtResource("3_jx6nd")
 
-[node name="Label" type="Label" parent="Button"]
+[node name="Label" type="Label" parent="Card1"]
 layout_mode = 1
 offset_left = 72.4545
 offset_top = 240.545
@@ -53,7 +71,54 @@ horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
-[node name="Button2" type="Button" parent="."]
+[node name="RedButton1" type="Button" parent="Card1"]
+layout_mode = 0
+offset_left = 72.4546
+offset_top = 81.4545
+offset_right = 167.455
+offset_bottom = 176.455
+theme = SubResource("Theme_1o63o")
+icon = ExtResource("6_vj47y")
+expand_icon = true
+
+[node name="RedButton2" type="Button" parent="Card1"]
+offset_left = 183.818
+offset_top = 81.4545
+offset_right = 278.819
+offset_bottom = 176.455
+theme = SubResource("Theme_1o63o")
+icon = ExtResource("7_cr8sj")
+expand_icon = true
+
+[node name="RedButton3" type="Button" parent="Card1"]
+offset_left = 302.0
+offset_top = 81.4545
+offset_right = 397.0
+offset_bottom = 176.455
+theme = SubResource("Theme_1o63o")
+icon = ExtResource("8_5tyjw")
+expand_icon = true
+
+[node name="RedButton4" type="Button" parent="Card1"]
+offset_left = 417.909
+offset_top = 83.7273
+offset_right = 512.91
+offset_bottom = 178.728
+theme = SubResource("Theme_1o63o")
+icon = ExtResource("9_2d2c2")
+expand_icon = true
+
+[node name="RedButton5" type="Button" parent="Card1"]
+layout_mode = 0
+offset_left = 531.545
+offset_top = 81.4545
+offset_right = 626.545
+offset_bottom = 176.455
+theme = SubResource("Theme_c2s6o")
+text = "Default"
+expand_icon = true
+
+[node name="Card2" type="Button" parent="."]
 layout_mode = 0
 offset_left = 1073.0
 offset_top = 309.0
@@ -62,7 +127,7 @@ offset_bottom = 732.0
 flat = true
 script = ExtResource("3_jx6nd")
 
-[node name="Label" type="Label" parent="Button2"]
+[node name="Label" type="Label" parent="Card2"]
 layout_mode = 0
 offset_left = 81.5455
 offset_top = 252.364
@@ -77,7 +142,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
-[node name="Button3" type="Button" parent="."]
+[node name="Card3" type="Button" parent="."]
 layout_mode = 0
 offset_left = 1818.0
 offset_top = 305.0
@@ -86,7 +151,7 @@ offset_bottom = 730.0
 flat = true
 script = ExtResource("3_jx6nd")
 
-[node name="Label" type="Label" parent="Button3"]
+[node name="Label" type="Label" parent="Card3"]
 layout_mode = 0
 offset_left = 72.9092
 offset_top = 245.0
@@ -99,7 +164,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
-[node name="Button4" type="Button" parent="."]
+[node name="Card4" type="Button" parent="."]
 layout_mode = 0
 offset_left = 2582.0
 offset_top = 282.0
@@ -108,7 +173,7 @@ offset_bottom = 698.0
 flat = true
 script = ExtResource("3_jx6nd")
 
-[node name="Label" type="Label" parent="Button4"]
+[node name="Label" type="Label" parent="Card4"]
 layout_mode = 0
 offset_left = 77.0
 offset_top = 245.0
@@ -123,7 +188,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
-[node name="Button5" type="Button" parent="."]
+[node name="Card5" type="Button" parent="."]
 layout_mode = 0
 offset_left = 3331.82
 offset_top = 261.364
@@ -133,7 +198,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_4ao02")
 flat = true
 script = ExtResource("3_jx6nd")
 
-[node name="Label" type="Label" parent="Button5"]
+[node name="Label" type="Label" parent="Card5"]
 layout_mode = 0
 offset_left = 72.727
 offset_top = 254.545
@@ -146,7 +211,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
-[node name="Button6" type="Button" parent="."]
+[node name="Card6" type="Button" parent="."]
 layout_mode = 0
 offset_left = 348.0
 offset_top = 784.0
@@ -155,7 +220,7 @@ offset_bottom = 1209.0
 flat = true
 script = ExtResource("3_jx6nd")
 
-[node name="Label" type="Label" parent="Button6"]
+[node name="Label" type="Label" parent="Card6"]
 layout_mode = 0
 offset_left = 73.0
 offset_top = 250.0
@@ -168,7 +233,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
-[node name="Button7" type="Button" parent="."]
+[node name="Card7" type="Button" parent="."]
 layout_mode = 0
 offset_left = 1089.0
 offset_top = 780.0
@@ -177,7 +242,7 @@ offset_bottom = 1205.0
 flat = true
 script = ExtResource("3_jx6nd")
 
-[node name="Label" type="Label" parent="Button7"]
+[node name="Label" type="Label" parent="Card7"]
 layout_mode = 0
 offset_left = 77.0
 offset_top = 251.0
@@ -192,7 +257,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
-[node name="Button8" type="Button" parent="."]
+[node name="Card8" type="Button" parent="."]
 layout_mode = 0
 offset_left = 1843.0
 offset_top = 780.0
@@ -201,7 +266,7 @@ offset_bottom = 1205.0
 flat = true
 script = ExtResource("3_jx6nd")
 
-[node name="Label" type="Label" parent="Button8"]
+[node name="Label" type="Label" parent="Card8"]
 layout_mode = 0
 offset_left = 72.9091
 offset_top = 247.273
@@ -216,7 +281,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
-[node name="Button9" type="Button" parent="."]
+[node name="Card9" type="Button" parent="."]
 layout_mode = 0
 offset_left = 2600.0
 offset_top = 736.0
@@ -225,7 +290,7 @@ offset_bottom = 1161.0
 flat = true
 script = ExtResource("3_jx6nd")
 
-[node name="Label" type="Label" parent="Button9"]
+[node name="Label" type="Label" parent="Card9"]
 layout_mode = 0
 offset_left = 74.0
 offset_top = 245.0
@@ -240,7 +305,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
-[node name="Button10" type="Button" parent="."]
+[node name="Card10" type="Button" parent="."]
 layout_mode = 0
 offset_left = 3355.0
 offset_top = 714.0
@@ -249,7 +314,7 @@ offset_bottom = 1139.0
 flat = true
 script = ExtResource("3_jx6nd")
 
-[node name="Label" type="Label" parent="Button10"]
+[node name="Label" type="Label" parent="Card10"]
 layout_mode = 0
 offset_left = 78.0
 offset_top = 248.0
@@ -264,7 +329,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
-[node name="Button11" type="Button" parent="."]
+[node name="Card11" type="Button" parent="."]
 layout_mode = 0
 offset_left = 318.0
 offset_top = 1255.0
@@ -273,7 +338,7 @@ offset_bottom = 1680.0
 flat = true
 script = ExtResource("3_jx6nd")
 
-[node name="Label" type="Label" parent="Button11"]
+[node name="Label" type="Label" parent="Card11"]
 layout_mode = 0
 offset_left = 73.0
 offset_top = 245.0
@@ -286,7 +351,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
-[node name="Button12" type="Button" parent="."]
+[node name="Card12" type="Button" parent="."]
 layout_mode = 0
 offset_left = 1084.0
 offset_top = 1225.0
@@ -295,7 +360,7 @@ offset_bottom = 1650.0
 flat = true
 script = ExtResource("3_jx6nd")
 
-[node name="Label" type="Label" parent="Button12"]
+[node name="Label" type="Label" parent="Card12"]
 layout_mode = 0
 offset_left = 76.0
 offset_top = 247.0
@@ -310,7 +375,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
-[node name="Button13" type="Button" parent="."]
+[node name="Card13" type="Button" parent="."]
 layout_mode = 0
 offset_left = 1850.0
 offset_top = 1236.0
@@ -319,7 +384,7 @@ offset_bottom = 1661.0
 flat = true
 script = ExtResource("3_jx6nd")
 
-[node name="Label" type="Label" parent="Button13"]
+[node name="Label" type="Label" parent="Card13"]
 layout_mode = 0
 offset_left = 68.0
 offset_top = 259.0
@@ -334,7 +399,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
-[node name="Button14" type="Button" parent="."]
+[node name="Card14" type="Button" parent="."]
 layout_mode = 0
 offset_left = 2605.0
 offset_top = 1211.0
@@ -343,7 +408,7 @@ offset_bottom = 1643.0
 flat = true
 script = ExtResource("3_jx6nd")
 
-[node name="Label" type="Label" parent="Button14"]
+[node name="Label" type="Label" parent="Card14"]
 layout_mode = 0
 offset_left = 77.0
 offset_top = 248.0
@@ -358,7 +423,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
-[node name="Button15" type="Button" parent="."]
+[node name="Card15" type="Button" parent="."]
 layout_mode = 0
 offset_left = 3364.0
 offset_top = 1209.0
@@ -367,7 +432,7 @@ offset_bottom = 1634.0
 flat = true
 script = ExtResource("3_jx6nd")
 
-[node name="Label" type="Label" parent="Button15"]
+[node name="Label" type="Label" parent="Card15"]
 layout_mode = 0
 offset_left = 77.0
 offset_top = 245.0
@@ -382,7 +447,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
-[node name="Button16" type="Button" parent="."]
+[node name="Card16" type="Button" parent="."]
 layout_mode = 0
 offset_left = 314.0
 offset_top = 1723.0
@@ -391,7 +456,7 @@ offset_bottom = 2148.0
 flat = true
 script = ExtResource("3_jx6nd")
 
-[node name="Label" type="Label" parent="Button16"]
+[node name="Label" type="Label" parent="Card16"]
 layout_mode = 0
 offset_left = 79.0
 offset_top = 245.0
@@ -404,7 +469,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
-[node name="Button17" type="Button" parent="."]
+[node name="Card17" type="Button" parent="."]
 layout_mode = 0
 offset_left = 1059.0
 offset_top = 1686.0
@@ -413,7 +478,7 @@ offset_bottom = 2109.0
 flat = true
 script = ExtResource("3_jx6nd")
 
-[node name="Label" type="Label" parent="Button17"]
+[node name="Label" type="Label" parent="Card17"]
 layout_mode = 0
 offset_left = 73.0
 offset_top = 254.0
@@ -428,7 +493,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
-[node name="Button18" type="Button" parent="."]
+[node name="Card18" type="Button" parent="."]
 layout_mode = 0
 offset_left = 1814.0
 offset_top = 1691.0
@@ -437,7 +502,7 @@ offset_bottom = 2102.0
 flat = true
 script = ExtResource("3_jx6nd")
 
-[node name="Label" type="Label" parent="Button18"]
+[node name="Label" type="Label" parent="Card18"]
 layout_mode = 0
 offset_left = 70.091
 offset_top = 247.636
@@ -452,7 +517,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
-[node name="Button19" type="Button" parent="."]
+[node name="Card19" type="Button" parent="."]
 layout_mode = 0
 offset_left = 2591.0
 offset_top = 1698.0
@@ -461,7 +526,7 @@ offset_bottom = 2123.0
 flat = true
 script = ExtResource("3_jx6nd")
 
-[node name="Label" type="Label" parent="Button19"]
+[node name="Label" type="Label" parent="Card19"]
 layout_mode = 0
 offset_left = 77.0
 offset_top = 250.0
@@ -476,7 +541,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
-[node name="Button20" type="Button" parent="."]
+[node name="Card20" type="Button" parent="."]
 layout_mode = 0
 offset_left = 3350.0
 offset_top = 1716.0
@@ -485,7 +550,7 @@ offset_bottom = 2141.0
 flat = true
 script = ExtResource("3_jx6nd")
 
-[node name="Label" type="Label" parent="Button20"]
+[node name="Label" type="Label" parent="Card20"]
 layout_mode = 0
 offset_left = 84.0
 offset_top = 249.0
@@ -500,7 +565,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
-[node name="Button21" type="Button" parent="."]
+[node name="Card21" type="Button" parent="."]
 layout_mode = 0
 offset_left = 298.0
 offset_top = 2175.0
@@ -509,7 +574,7 @@ offset_bottom = 2602.0
 flat = true
 script = ExtResource("3_jx6nd")
 
-[node name="Label" type="Label" parent="Button21"]
+[node name="Label" type="Label" parent="Card21"]
 layout_mode = 0
 offset_left = 68.0
 offset_top = 255.0
@@ -522,7 +587,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
-[node name="Button22" type="Button" parent="."]
+[node name="Card22" type="Button" parent="."]
 layout_mode = 0
 offset_left = 1036.0
 offset_top = 2166.0
@@ -531,7 +596,7 @@ offset_bottom = 2600.0
 flat = true
 script = ExtResource("3_jx6nd")
 
-[node name="Label" type="Label" parent="Button22"]
+[node name="Label" type="Label" parent="Card22"]
 layout_mode = 0
 offset_left = 71.0
 offset_top = 254.0
@@ -546,7 +611,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
-[node name="Button23" type="Button" parent="."]
+[node name="Card23" type="Button" parent="."]
 layout_mode = 0
 offset_left = 1800.0
 offset_top = 2143.0
@@ -555,7 +620,7 @@ offset_bottom = 2586.0
 flat = true
 script = ExtResource("3_jx6nd")
 
-[node name="Label" type="Label" parent="Button23"]
+[node name="Label" type="Label" parent="Card23"]
 layout_mode = 0
 offset_left = 73.0
 offset_top = 266.0
@@ -570,7 +635,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
-[node name="Button24" type="Button" parent="."]
+[node name="Card24" type="Button" parent="."]
 layout_mode = 0
 offset_left = 2577.0
 offset_top = 2168.0
@@ -579,7 +644,7 @@ offset_bottom = 2593.0
 flat = true
 script = ExtResource("3_jx6nd")
 
-[node name="Label" type="Label" parent="Button24"]
+[node name="Label" type="Label" parent="Card24"]
 layout_mode = 0
 offset_left = 78.0
 offset_top = 248.0
@@ -592,7 +657,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
-[node name="Button25" type="Button" parent="."]
+[node name="Card25" type="Button" parent="."]
 layout_mode = 0
 offset_left = 3361.0
 offset_top = 2175.0
@@ -601,7 +666,7 @@ offset_bottom = 2600.0
 flat = true
 script = ExtResource("3_jx6nd")
 
-[node name="Label" type="Label" parent="Button25"]
+[node name="Label" type="Label" parent="Card25"]
 layout_mode = 0
 offset_left = 73.0
 offset_top = 248.0
@@ -623,11 +688,11 @@ stream = ExtResource("5_kylop")
 volume_db = 1.0
 script = ExtResource("3_37h5g")
 
-[connection signal="toggled" from="Button" to="Button" method="_on_toggled"]
-[connection signal="pressed" from="Button2" to="Button2" method="_on_pressed"]
-[connection signal="pressed" from="Button3" to="Button3" method="_on_pressed"]
-[connection signal="pressed" from="Button4" to="Button4" method="_on_pressed"]
-[connection signal="pressed" from="Button5" to="Button5" method="_on_pressed"]
-[connection signal="pressed" from="Button6" to="Button6" method="_on_pressed"]
-[connection signal="pressed" from="Button25" to="Button25" method="_on_pressed"]
+[connection signal="toggled" from="Card1" to="Card1" method="_on_toggled"]
+[connection signal="pressed" from="Card2" to="Card2" method="_on_pressed"]
+[connection signal="pressed" from="Card3" to="Card3" method="_on_pressed"]
+[connection signal="pressed" from="Card4" to="Card4" method="_on_pressed"]
+[connection signal="pressed" from="Card5" to="Card5" method="_on_pressed"]
+[connection signal="pressed" from="Card6" to="Card6" method="_on_pressed"]
+[connection signal="pressed" from="Card25" to="Card25" method="_on_pressed"]
 [connection signal="timeout" from="Timer" to="AudioStreamPlayer" method="_on_timer_timeout"]

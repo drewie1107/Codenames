@@ -13,7 +13,7 @@ config_version=5
 config/name="Codenames Card Generator"
 run/main_scene="res://codenames_layout_1.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://Codenames_Icon.png"
 
 [display]
 
