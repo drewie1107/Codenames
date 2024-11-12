@@ -1,5 +1,7 @@
 extends Node2D
 
+@export var disable: bool = false
+
 var _click_data: Array = []
 
 var color = Color.WHITE
@@ -8,7 +10,7 @@ var filled = false
 var size = Vector2(700,400)
 
 func _input(event: InputEvent) -> void:
-	if not Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
+	if not Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) or disable:
 		return
 		
 	_click_data.append({"position": get_local_mouse_position(), "color": color}) # Horrible

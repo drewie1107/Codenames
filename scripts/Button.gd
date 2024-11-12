@@ -1,16 +1,18 @@
 
 extends Node
 
-#Colors for buttons
-var colors = [
-	Color(1, 1, 1),   # White
-	Color(1, 0, 0),   # Red
-	Color(0, 0, 0),   # Black
-	Color(0, 0, 1)    # Blue
-]
-var current_color_index = 0
+var children: Array
+
+func _ready():
+	children = get_children()
 
 func _on_toggled(toggled_on):
-	current_color_index = (current_color_index + 1) % colors.size()
-	self.modulate = colors[current_color_index]
-	
+	print("toggled parent button")
+	for child in children:
+		if child is Button:
+			child.visible = !child.visible
+
+func _on_button_update_color(color: LabelSettings):
+	for child in children:
+		if child is Label:
+			child.set_label_settings(color)
