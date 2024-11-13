@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://cv481eo02q64o"]
+[gd_scene load_steps=20 format=3 uid="uid://cv481eo02q64o"]
 
 [ext_resource type="Texture2D" uid="uid://dsvejggx7mwvf" path="res://cards_layout_1.png" id="1_3oocm"]
 [ext_resource type="Script" path="res://scripts/Game.gd" id="2_ckwcx"]
@@ -16,8 +16,10 @@
 [ext_resource type="Texture2D" uid="uid://dt4jex6wvadt4" path="res://black_button.png" id="9_2d2c2"]
 [ext_resource type="LabelSettings" uid="uid://cfjowlatplfgf" path="res://label_settings_blue.tres" id="11_k5oq1"]
 [ext_resource type="LabelSettings" uid="uid://bj6htyvvh0gdn" path="res://label_settings_white.tres" id="13_gy33p"]
+[ext_resource type="LabelSettings" uid="uid://5oxg0amgatkf" path="res://label_settings_loser.tres" id="15_f7fi4"]
 
 [sub_resource type="Theme" id="Theme_1o63o"]
+default_font_size = 20
 Button/styles/normal = ExtResource("6_aev0w")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4ao02"]
@@ -115,7 +117,7 @@ toggle_mode = true
 icon = ExtResource("9_2d2c2")
 expand_icon = true
 script = ExtResource("7_auggp")
-label_setting = ExtResource("5_7h7fx")
+label_setting = ExtResource("15_f7fi4")
 
 [node name="Erase Button" type="Button" parent="Card1"]
 visible = false
@@ -126,7 +128,7 @@ offset_right = 626.546
 offset_bottom = 178.728
 theme = SubResource("Theme_1o63o")
 toggle_mode = true
-text = "Disable"
+text = "DISABLE"
 expand_icon = true
 script = ExtResource("7_auggp")
 label_setting = ExtResource("5_7h7fx")
@@ -144,7 +146,7 @@ script = ExtResource("3_jx6nd")
 layout_mode = 0
 offset_left = 81.5455
 offset_top = 252.364
-offset_right = 646.545
+offset_right = 694.546
 offset_bottom = 357.364
 rotation = 0.0139626
 pivot_offset = Vector2(298, 48)
@@ -155,12 +157,83 @@ horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
+[node name="Red Button" type="Button" parent="Card2"]
+visible = false
+layout_mode = 0
+offset_left = 72.4546
+offset_top = 81.4545
+offset_right = 167.455
+offset_bottom = 176.455
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("6_vj47y")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("5_5f2v4")
+
+[node name="Blue Button" type="Button" parent="Card2"]
+visible = false
+layout_mode = 0
+offset_left = 186.091
+offset_top = 83.7273
+offset_right = 281.091
+offset_bottom = 178.728
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("7_cr8sj")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("11_k5oq1")
+
+[node name="White Button" type="Button" parent="Card2"]
+visible = false
+layout_mode = 0
+offset_left = 302.0
+offset_top = 86.0
+offset_right = 397.0
+offset_bottom = 181.001
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("8_5tyjw")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("13_gy33p")
+
+[node name="Black Button" type="Button" parent="Card2"]
+visible = false
+layout_mode = 0
+offset_left = 417.909
+offset_top = 83.7273
+offset_right = 512.909
+offset_bottom = 178.728
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("9_2d2c2")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("15_f7fi4")
+
+[node name="Erase Button" type="Button" parent="Card2"]
+visible = false
+layout_mode = 0
+offset_left = 531.545
+offset_top = 83.7273
+offset_right = 626.546
+offset_bottom = 178.728
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+text = "DISABLE"
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("5_7h7fx")
+
 [node name="Card3" type="Button" parent="."]
 layout_mode = 0
 offset_left = 1818.0
 offset_top = 305.0
 offset_right = 2530.0
 offset_bottom = 730.0
+toggle_mode = true
 flat = true
 script = ExtResource("3_jx6nd")
 
@@ -176,6 +249,76 @@ label_settings = ExtResource("5_7h7fx")
 horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
+
+[node name="Red Button" type="Button" parent="Card3"]
+visible = false
+layout_mode = 0
+offset_left = 72.4546
+offset_top = 81.4545
+offset_right = 167.455
+offset_bottom = 176.455
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("6_vj47y")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("5_5f2v4")
+
+[node name="Blue Button" type="Button" parent="Card3"]
+visible = false
+layout_mode = 0
+offset_left = 186.091
+offset_top = 83.7273
+offset_right = 281.091
+offset_bottom = 178.728
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("7_cr8sj")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("11_k5oq1")
+
+[node name="White Button" type="Button" parent="Card3"]
+visible = false
+layout_mode = 0
+offset_left = 302.0
+offset_top = 86.0
+offset_right = 397.0
+offset_bottom = 181.001
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("8_5tyjw")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("13_gy33p")
+
+[node name="Black Button" type="Button" parent="Card3"]
+visible = false
+layout_mode = 0
+offset_left = 417.909
+offset_top = 83.7273
+offset_right = 512.909
+offset_bottom = 178.728
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("9_2d2c2")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("15_f7fi4")
+
+[node name="Erase Button" type="Button" parent="Card3"]
+visible = false
+layout_mode = 0
+offset_left = 531.545
+offset_top = 83.7273
+offset_right = 626.546
+offset_bottom = 178.728
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+text = "DISABLE"
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("5_7h7fx")
 
 [node name="Card4" type="Button" parent="."]
 layout_mode = 0
@@ -201,6 +344,71 @@ horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
+[node name="Red Button" type="Button" parent="Card4"]
+visible = false
+offset_left = 72.4546
+offset_top = 81.4545
+offset_right = 167.455
+offset_bottom = 176.455
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("6_vj47y")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("5_5f2v4")
+
+[node name="Blue Button" type="Button" parent="Card4"]
+visible = false
+offset_left = 186.091
+offset_top = 83.7273
+offset_right = 281.091
+offset_bottom = 178.728
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("7_cr8sj")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("11_k5oq1")
+
+[node name="White Button" type="Button" parent="Card4"]
+visible = false
+offset_left = 302.0
+offset_top = 86.0
+offset_right = 397.0
+offset_bottom = 181.001
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("8_5tyjw")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("13_gy33p")
+
+[node name="Black Button" type="Button" parent="Card4"]
+visible = false
+offset_left = 417.909
+offset_top = 83.7273
+offset_right = 512.909
+offset_bottom = 178.728
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("9_2d2c2")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("15_f7fi4")
+
+[node name="Erase Button" type="Button" parent="Card4"]
+visible = false
+offset_left = 531.545
+offset_top = 83.7273
+offset_right = 626.546
+offset_bottom = 178.728
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+text = "DISABLE"
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("5_7h7fx")
+
 [node name="Card5" type="Button" parent="."]
 layout_mode = 0
 offset_left = 3331.82
@@ -224,6 +432,71 @@ horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
+[node name="Red Button" type="Button" parent="Card5"]
+visible = false
+offset_left = 72.4546
+offset_top = 81.4545
+offset_right = 167.455
+offset_bottom = 176.455
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("6_vj47y")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("5_5f2v4")
+
+[node name="Blue Button" type="Button" parent="Card5"]
+visible = false
+offset_left = 186.091
+offset_top = 83.7273
+offset_right = 281.091
+offset_bottom = 178.728
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("7_cr8sj")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("11_k5oq1")
+
+[node name="White Button" type="Button" parent="Card5"]
+visible = false
+offset_left = 302.0
+offset_top = 86.0
+offset_right = 397.0
+offset_bottom = 181.001
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("8_5tyjw")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("13_gy33p")
+
+[node name="Black Button" type="Button" parent="Card5"]
+visible = false
+offset_left = 417.909
+offset_top = 83.7273
+offset_right = 512.909
+offset_bottom = 178.728
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("9_2d2c2")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("15_f7fi4")
+
+[node name="Erase Button" type="Button" parent="Card5"]
+visible = false
+offset_left = 531.545
+offset_top = 83.7273
+offset_right = 626.546
+offset_bottom = 178.728
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+text = "DISABLE"
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("5_7h7fx")
+
 [node name="Card6" type="Button" parent="."]
 layout_mode = 0
 offset_left = 348.0
@@ -245,6 +518,71 @@ label_settings = ExtResource("5_7h7fx")
 horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
+
+[node name="Red Button" type="Button" parent="Card6"]
+visible = false
+offset_left = 72.4546
+offset_top = 81.4545
+offset_right = 167.455
+offset_bottom = 176.455
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("6_vj47y")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("5_5f2v4")
+
+[node name="Blue Button" type="Button" parent="Card6"]
+visible = false
+offset_left = 186.091
+offset_top = 83.7273
+offset_right = 281.091
+offset_bottom = 178.728
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("7_cr8sj")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("11_k5oq1")
+
+[node name="White Button" type="Button" parent="Card6"]
+visible = false
+offset_left = 302.0
+offset_top = 86.0
+offset_right = 397.0
+offset_bottom = 181.001
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("8_5tyjw")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("13_gy33p")
+
+[node name="Black Button" type="Button" parent="Card6"]
+visible = false
+offset_left = 417.909
+offset_top = 83.7273
+offset_right = 512.909
+offset_bottom = 178.728
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("9_2d2c2")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("15_f7fi4")
+
+[node name="Erase Button" type="Button" parent="Card6"]
+visible = false
+offset_left = 531.545
+offset_top = 83.7273
+offset_right = 626.546
+offset_bottom = 178.728
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+text = "DISABLE"
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("5_7h7fx")
 
 [node name="Card7" type="Button" parent="."]
 layout_mode = 0
@@ -270,6 +608,71 @@ horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
+[node name="Red Button" type="Button" parent="Card7"]
+visible = false
+offset_left = 72.4546
+offset_top = 81.4545
+offset_right = 167.455
+offset_bottom = 176.455
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("6_vj47y")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("5_5f2v4")
+
+[node name="Blue Button" type="Button" parent="Card7"]
+visible = false
+offset_left = 186.091
+offset_top = 83.7273
+offset_right = 281.091
+offset_bottom = 178.728
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("7_cr8sj")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("11_k5oq1")
+
+[node name="White Button" type="Button" parent="Card7"]
+visible = false
+offset_left = 302.0
+offset_top = 86.0
+offset_right = 397.0
+offset_bottom = 181.001
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("8_5tyjw")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("13_gy33p")
+
+[node name="Black Button" type="Button" parent="Card7"]
+visible = false
+offset_left = 417.909
+offset_top = 83.7273
+offset_right = 512.909
+offset_bottom = 178.728
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("9_2d2c2")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("15_f7fi4")
+
+[node name="Erase Button" type="Button" parent="Card7"]
+visible = false
+offset_left = 531.545
+offset_top = 83.7273
+offset_right = 626.546
+offset_bottom = 178.728
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+text = "DISABLE"
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("5_7h7fx")
+
 [node name="Card8" type="Button" parent="."]
 layout_mode = 0
 offset_left = 1843.0
@@ -293,6 +696,71 @@ label_settings = ExtResource("5_7h7fx")
 horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
+
+[node name="Red Button" type="Button" parent="Card8"]
+visible = false
+offset_left = 72.4546
+offset_top = 81.4545
+offset_right = 167.455
+offset_bottom = 176.455
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("6_vj47y")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("5_5f2v4")
+
+[node name="Blue Button" type="Button" parent="Card8"]
+visible = false
+offset_left = 186.091
+offset_top = 83.7273
+offset_right = 281.091
+offset_bottom = 178.728
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("7_cr8sj")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("11_k5oq1")
+
+[node name="White Button" type="Button" parent="Card8"]
+visible = false
+offset_left = 302.0
+offset_top = 86.0
+offset_right = 397.0
+offset_bottom = 181.001
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("8_5tyjw")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("13_gy33p")
+
+[node name="Black Button" type="Button" parent="Card8"]
+visible = false
+offset_left = 417.909
+offset_top = 83.7273
+offset_right = 512.909
+offset_bottom = 178.728
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("9_2d2c2")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("15_f7fi4")
+
+[node name="Erase Button" type="Button" parent="Card8"]
+visible = false
+offset_left = 531.545
+offset_top = 83.7273
+offset_right = 626.546
+offset_bottom = 178.728
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+text = "DISABLE"
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("5_7h7fx")
 
 [node name="Card9" type="Button" parent="."]
 layout_mode = 0
@@ -318,6 +786,71 @@ horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
+[node name="Red Button" type="Button" parent="Card9"]
+visible = false
+offset_left = 72.4546
+offset_top = 81.4545
+offset_right = 167.455
+offset_bottom = 176.455
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("6_vj47y")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("5_5f2v4")
+
+[node name="Blue Button" type="Button" parent="Card9"]
+visible = false
+offset_left = 186.091
+offset_top = 83.7273
+offset_right = 281.091
+offset_bottom = 178.728
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("7_cr8sj")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("11_k5oq1")
+
+[node name="White Button" type="Button" parent="Card9"]
+visible = false
+offset_left = 302.0
+offset_top = 86.0
+offset_right = 397.0
+offset_bottom = 181.001
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("8_5tyjw")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("13_gy33p")
+
+[node name="Black Button" type="Button" parent="Card9"]
+visible = false
+offset_left = 417.909
+offset_top = 83.7273
+offset_right = 512.909
+offset_bottom = 178.728
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("9_2d2c2")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("15_f7fi4")
+
+[node name="Erase Button" type="Button" parent="Card9"]
+visible = false
+offset_left = 531.545
+offset_top = 83.7273
+offset_right = 626.546
+offset_bottom = 178.728
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+text = "DISABLE"
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("5_7h7fx")
+
 [node name="Card10" type="Button" parent="."]
 layout_mode = 0
 offset_left = 3355.0
@@ -342,6 +875,71 @@ horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
+[node name="Red Button" type="Button" parent="Card10"]
+visible = false
+offset_left = 72.4546
+offset_top = 81.4545
+offset_right = 167.455
+offset_bottom = 176.455
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("6_vj47y")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("5_5f2v4")
+
+[node name="Blue Button" type="Button" parent="Card10"]
+visible = false
+offset_left = 186.091
+offset_top = 83.7273
+offset_right = 281.091
+offset_bottom = 178.728
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("7_cr8sj")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("11_k5oq1")
+
+[node name="White Button" type="Button" parent="Card10"]
+visible = false
+offset_left = 302.0
+offset_top = 86.0
+offset_right = 397.0
+offset_bottom = 181.001
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("8_5tyjw")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("13_gy33p")
+
+[node name="Black Button" type="Button" parent="Card10"]
+visible = false
+offset_left = 417.909
+offset_top = 83.7273
+offset_right = 512.909
+offset_bottom = 178.728
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("9_2d2c2")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("15_f7fi4")
+
+[node name="Erase Button" type="Button" parent="Card10"]
+visible = false
+offset_left = 531.545
+offset_top = 83.7273
+offset_right = 626.546
+offset_bottom = 178.728
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+text = "DISABLE"
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("5_7h7fx")
+
 [node name="Card11" type="Button" parent="."]
 layout_mode = 0
 offset_left = 318.0
@@ -363,6 +961,71 @@ label_settings = ExtResource("5_7h7fx")
 horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
+
+[node name="Red Button" type="Button" parent="Card11"]
+visible = false
+offset_left = 72.4546
+offset_top = 81.4545
+offset_right = 167.455
+offset_bottom = 176.455
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("6_vj47y")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("5_5f2v4")
+
+[node name="Blue Button" type="Button" parent="Card11"]
+visible = false
+offset_left = 186.091
+offset_top = 83.7273
+offset_right = 281.091
+offset_bottom = 178.728
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("7_cr8sj")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("11_k5oq1")
+
+[node name="White Button" type="Button" parent="Card11"]
+visible = false
+offset_left = 302.0
+offset_top = 86.0
+offset_right = 397.0
+offset_bottom = 181.001
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("8_5tyjw")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("13_gy33p")
+
+[node name="Black Button" type="Button" parent="Card11"]
+visible = false
+offset_left = 417.909
+offset_top = 83.7273
+offset_right = 512.909
+offset_bottom = 178.728
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("9_2d2c2")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("15_f7fi4")
+
+[node name="Erase Button" type="Button" parent="Card11"]
+visible = false
+offset_left = 531.545
+offset_top = 83.7273
+offset_right = 626.546
+offset_bottom = 178.728
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+text = "DISABLE"
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("5_7h7fx")
 
 [node name="Card12" type="Button" parent="."]
 layout_mode = 0
@@ -388,6 +1051,71 @@ horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
+[node name="Red Button" type="Button" parent="Card12"]
+visible = false
+offset_left = 72.4546
+offset_top = 81.4545
+offset_right = 167.455
+offset_bottom = 176.455
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("6_vj47y")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("5_5f2v4")
+
+[node name="Blue Button" type="Button" parent="Card12"]
+visible = false
+offset_left = 186.091
+offset_top = 83.7273
+offset_right = 281.091
+offset_bottom = 178.728
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("7_cr8sj")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("11_k5oq1")
+
+[node name="White Button" type="Button" parent="Card12"]
+visible = false
+offset_left = 302.0
+offset_top = 86.0
+offset_right = 397.0
+offset_bottom = 181.001
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("8_5tyjw")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("13_gy33p")
+
+[node name="Black Button" type="Button" parent="Card12"]
+visible = false
+offset_left = 417.909
+offset_top = 83.7273
+offset_right = 512.909
+offset_bottom = 178.728
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("9_2d2c2")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("15_f7fi4")
+
+[node name="Erase Button" type="Button" parent="Card12"]
+visible = false
+offset_left = 531.545
+offset_top = 83.7273
+offset_right = 626.546
+offset_bottom = 178.728
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+text = "DISABLE"
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("5_7h7fx")
+
 [node name="Card13" type="Button" parent="."]
 layout_mode = 0
 offset_left = 1850.0
@@ -411,6 +1139,71 @@ label_settings = ExtResource("5_7h7fx")
 horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
+
+[node name="Red Button" type="Button" parent="Card13"]
+visible = false
+offset_left = 72.4546
+offset_top = 81.4545
+offset_right = 167.455
+offset_bottom = 176.455
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("6_vj47y")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("5_5f2v4")
+
+[node name="Blue Button" type="Button" parent="Card13"]
+visible = false
+offset_left = 186.091
+offset_top = 83.7273
+offset_right = 281.091
+offset_bottom = 178.728
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("7_cr8sj")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("11_k5oq1")
+
+[node name="White Button" type="Button" parent="Card13"]
+visible = false
+offset_left = 302.0
+offset_top = 86.0
+offset_right = 397.0
+offset_bottom = 181.001
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("8_5tyjw")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("13_gy33p")
+
+[node name="Black Button" type="Button" parent="Card13"]
+visible = false
+offset_left = 417.909
+offset_top = 83.7273
+offset_right = 512.909
+offset_bottom = 178.728
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("9_2d2c2")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("15_f7fi4")
+
+[node name="Erase Button" type="Button" parent="Card13"]
+visible = false
+offset_left = 531.545
+offset_top = 83.7273
+offset_right = 626.546
+offset_bottom = 178.728
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+text = "DISABLE"
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("5_7h7fx")
 
 [node name="Card14" type="Button" parent="."]
 layout_mode = 0
@@ -436,6 +1229,71 @@ horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
+[node name="Red Button" type="Button" parent="Card14"]
+visible = false
+offset_left = 72.4546
+offset_top = 81.4545
+offset_right = 167.455
+offset_bottom = 176.455
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("6_vj47y")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("5_5f2v4")
+
+[node name="Blue Button" type="Button" parent="Card14"]
+visible = false
+offset_left = 186.091
+offset_top = 83.7273
+offset_right = 281.091
+offset_bottom = 178.728
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("7_cr8sj")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("11_k5oq1")
+
+[node name="White Button" type="Button" parent="Card14"]
+visible = false
+offset_left = 302.0
+offset_top = 86.0
+offset_right = 397.0
+offset_bottom = 181.001
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("8_5tyjw")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("13_gy33p")
+
+[node name="Black Button" type="Button" parent="Card14"]
+visible = false
+offset_left = 417.909
+offset_top = 83.7273
+offset_right = 512.909
+offset_bottom = 178.728
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("9_2d2c2")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("15_f7fi4")
+
+[node name="Erase Button" type="Button" parent="Card14"]
+visible = false
+offset_left = 531.545
+offset_top = 83.7273
+offset_right = 626.546
+offset_bottom = 178.728
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+text = "DISABLE"
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("5_7h7fx")
+
 [node name="Card15" type="Button" parent="."]
 layout_mode = 0
 offset_left = 3364.0
@@ -460,6 +1318,71 @@ horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
+[node name="Red Button" type="Button" parent="Card15"]
+visible = false
+offset_left = 72.4546
+offset_top = 81.4545
+offset_right = 167.455
+offset_bottom = 176.455
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("6_vj47y")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("5_5f2v4")
+
+[node name="Blue Button" type="Button" parent="Card15"]
+visible = false
+offset_left = 186.091
+offset_top = 83.7273
+offset_right = 281.091
+offset_bottom = 178.728
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("7_cr8sj")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("11_k5oq1")
+
+[node name="White Button" type="Button" parent="Card15"]
+visible = false
+offset_left = 302.0
+offset_top = 86.0
+offset_right = 397.0
+offset_bottom = 181.001
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("8_5tyjw")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("13_gy33p")
+
+[node name="Black Button" type="Button" parent="Card15"]
+visible = false
+offset_left = 417.909
+offset_top = 83.7273
+offset_right = 512.909
+offset_bottom = 178.728
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("9_2d2c2")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("15_f7fi4")
+
+[node name="Erase Button" type="Button" parent="Card15"]
+visible = false
+offset_left = 531.545
+offset_top = 83.7273
+offset_right = 626.546
+offset_bottom = 178.728
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+text = "DISABLE"
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("5_7h7fx")
+
 [node name="Card16" type="Button" parent="."]
 layout_mode = 0
 offset_left = 314.0
@@ -481,6 +1404,71 @@ label_settings = ExtResource("5_7h7fx")
 horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
+
+[node name="Red Button" type="Button" parent="Card16"]
+visible = false
+offset_left = 72.4546
+offset_top = 81.4545
+offset_right = 167.455
+offset_bottom = 176.455
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("6_vj47y")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("5_5f2v4")
+
+[node name="Blue Button" type="Button" parent="Card16"]
+visible = false
+offset_left = 186.091
+offset_top = 83.7273
+offset_right = 281.091
+offset_bottom = 178.728
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("7_cr8sj")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("11_k5oq1")
+
+[node name="White Button" type="Button" parent="Card16"]
+visible = false
+offset_left = 302.0
+offset_top = 86.0
+offset_right = 397.0
+offset_bottom = 181.001
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("8_5tyjw")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("13_gy33p")
+
+[node name="Black Button" type="Button" parent="Card16"]
+visible = false
+offset_left = 417.909
+offset_top = 83.7273
+offset_right = 512.909
+offset_bottom = 178.728
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("9_2d2c2")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("15_f7fi4")
+
+[node name="Erase Button" type="Button" parent="Card16"]
+visible = false
+offset_left = 531.545
+offset_top = 83.7273
+offset_right = 626.546
+offset_bottom = 178.728
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+text = "DISABLE"
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("5_7h7fx")
 
 [node name="Card17" type="Button" parent="."]
 layout_mode = 0
@@ -506,6 +1494,71 @@ horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
+[node name="Red Button" type="Button" parent="Card17"]
+visible = false
+offset_left = 72.4546
+offset_top = 81.4545
+offset_right = 167.455
+offset_bottom = 176.455
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("6_vj47y")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("5_5f2v4")
+
+[node name="Blue Button" type="Button" parent="Card17"]
+visible = false
+offset_left = 186.091
+offset_top = 83.7273
+offset_right = 281.091
+offset_bottom = 178.728
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("7_cr8sj")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("11_k5oq1")
+
+[node name="White Button" type="Button" parent="Card17"]
+visible = false
+offset_left = 302.0
+offset_top = 86.0
+offset_right = 397.0
+offset_bottom = 181.001
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("8_5tyjw")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("13_gy33p")
+
+[node name="Black Button" type="Button" parent="Card17"]
+visible = false
+offset_left = 417.909
+offset_top = 83.7273
+offset_right = 512.909
+offset_bottom = 178.728
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("9_2d2c2")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("15_f7fi4")
+
+[node name="Erase Button" type="Button" parent="Card17"]
+visible = false
+offset_left = 531.545
+offset_top = 83.7273
+offset_right = 626.546
+offset_bottom = 178.728
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+text = "DISABLE"
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("5_7h7fx")
+
 [node name="Card18" type="Button" parent="."]
 layout_mode = 0
 offset_left = 1814.0
@@ -529,6 +1582,71 @@ label_settings = ExtResource("5_7h7fx")
 horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
+
+[node name="Red Button" type="Button" parent="Card18"]
+visible = false
+offset_left = 72.4546
+offset_top = 81.4545
+offset_right = 167.455
+offset_bottom = 176.455
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("6_vj47y")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("5_5f2v4")
+
+[node name="Blue Button" type="Button" parent="Card18"]
+visible = false
+offset_left = 186.091
+offset_top = 83.7273
+offset_right = 281.091
+offset_bottom = 178.728
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("7_cr8sj")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("11_k5oq1")
+
+[node name="White Button" type="Button" parent="Card18"]
+visible = false
+offset_left = 302.0
+offset_top = 86.0
+offset_right = 397.0
+offset_bottom = 181.001
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("8_5tyjw")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("13_gy33p")
+
+[node name="Black Button" type="Button" parent="Card18"]
+visible = false
+offset_left = 417.909
+offset_top = 83.7273
+offset_right = 512.909
+offset_bottom = 178.728
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("9_2d2c2")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("15_f7fi4")
+
+[node name="Erase Button" type="Button" parent="Card18"]
+visible = false
+offset_left = 531.545
+offset_top = 83.7273
+offset_right = 626.546
+offset_bottom = 178.728
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+text = "DISABLE"
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("5_7h7fx")
 
 [node name="Card19" type="Button" parent="."]
 layout_mode = 0
@@ -554,6 +1672,71 @@ horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
+[node name="Red Button" type="Button" parent="Card19"]
+visible = false
+offset_left = 72.4546
+offset_top = 81.4545
+offset_right = 167.455
+offset_bottom = 176.455
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("6_vj47y")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("5_5f2v4")
+
+[node name="Blue Button" type="Button" parent="Card19"]
+visible = false
+offset_left = 186.091
+offset_top = 83.7273
+offset_right = 281.091
+offset_bottom = 178.728
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("7_cr8sj")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("11_k5oq1")
+
+[node name="White Button" type="Button" parent="Card19"]
+visible = false
+offset_left = 302.0
+offset_top = 86.0
+offset_right = 397.0
+offset_bottom = 181.001
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("8_5tyjw")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("13_gy33p")
+
+[node name="Black Button" type="Button" parent="Card19"]
+visible = false
+offset_left = 417.909
+offset_top = 83.7273
+offset_right = 512.909
+offset_bottom = 178.728
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("9_2d2c2")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("15_f7fi4")
+
+[node name="Erase Button" type="Button" parent="Card19"]
+visible = false
+offset_left = 531.545
+offset_top = 83.7273
+offset_right = 626.546
+offset_bottom = 178.728
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+text = "DISABLE"
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("5_7h7fx")
+
 [node name="Card20" type="Button" parent="."]
 layout_mode = 0
 offset_left = 3350.0
@@ -578,6 +1761,71 @@ horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
+[node name="Red Button" type="Button" parent="Card20"]
+visible = false
+offset_left = 72.4546
+offset_top = 81.4545
+offset_right = 167.455
+offset_bottom = 176.455
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("6_vj47y")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("5_5f2v4")
+
+[node name="Blue Button" type="Button" parent="Card20"]
+visible = false
+offset_left = 186.091
+offset_top = 83.7273
+offset_right = 281.091
+offset_bottom = 178.728
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("7_cr8sj")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("11_k5oq1")
+
+[node name="White Button" type="Button" parent="Card20"]
+visible = false
+offset_left = 302.0
+offset_top = 86.0
+offset_right = 397.0
+offset_bottom = 181.001
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("8_5tyjw")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("13_gy33p")
+
+[node name="Black Button" type="Button" parent="Card20"]
+visible = false
+offset_left = 417.909
+offset_top = 83.7273
+offset_right = 512.909
+offset_bottom = 178.728
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("9_2d2c2")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("15_f7fi4")
+
+[node name="Erase Button" type="Button" parent="Card20"]
+visible = false
+offset_left = 531.545
+offset_top = 83.7273
+offset_right = 626.546
+offset_bottom = 178.728
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+text = "DISABLE"
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("5_7h7fx")
+
 [node name="Card21" type="Button" parent="."]
 layout_mode = 0
 offset_left = 298.0
@@ -599,6 +1847,71 @@ label_settings = ExtResource("5_7h7fx")
 horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
+
+[node name="Red Button" type="Button" parent="Card21"]
+visible = false
+offset_left = 72.4546
+offset_top = 81.4545
+offset_right = 167.455
+offset_bottom = 176.455
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("6_vj47y")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("5_5f2v4")
+
+[node name="Blue Button" type="Button" parent="Card21"]
+visible = false
+offset_left = 186.091
+offset_top = 83.7273
+offset_right = 281.091
+offset_bottom = 178.728
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("7_cr8sj")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("11_k5oq1")
+
+[node name="White Button" type="Button" parent="Card21"]
+visible = false
+offset_left = 302.0
+offset_top = 86.0
+offset_right = 397.0
+offset_bottom = 181.001
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("8_5tyjw")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("13_gy33p")
+
+[node name="Black Button" type="Button" parent="Card21"]
+visible = false
+offset_left = 417.909
+offset_top = 83.7273
+offset_right = 512.909
+offset_bottom = 178.728
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("9_2d2c2")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("15_f7fi4")
+
+[node name="Erase Button" type="Button" parent="Card21"]
+visible = false
+offset_left = 531.545
+offset_top = 83.7273
+offset_right = 626.546
+offset_bottom = 178.728
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+text = "DISABLE"
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("5_7h7fx")
 
 [node name="Card22" type="Button" parent="."]
 layout_mode = 0
@@ -624,6 +1937,71 @@ horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
+[node name="Red Button" type="Button" parent="Card22"]
+visible = false
+offset_left = 72.4546
+offset_top = 81.4545
+offset_right = 167.455
+offset_bottom = 176.455
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("6_vj47y")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("5_5f2v4")
+
+[node name="Blue Button" type="Button" parent="Card22"]
+visible = false
+offset_left = 186.091
+offset_top = 83.7273
+offset_right = 281.091
+offset_bottom = 178.728
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("7_cr8sj")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("11_k5oq1")
+
+[node name="White Button" type="Button" parent="Card22"]
+visible = false
+offset_left = 302.0
+offset_top = 86.0
+offset_right = 397.0
+offset_bottom = 181.001
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("8_5tyjw")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("13_gy33p")
+
+[node name="Black Button" type="Button" parent="Card22"]
+visible = false
+offset_left = 417.909
+offset_top = 83.7273
+offset_right = 512.909
+offset_bottom = 178.728
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("9_2d2c2")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("15_f7fi4")
+
+[node name="Erase Button" type="Button" parent="Card22"]
+visible = false
+offset_left = 531.545
+offset_top = 83.7273
+offset_right = 626.546
+offset_bottom = 178.728
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+text = "DISABLE"
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("5_7h7fx")
+
 [node name="Card23" type="Button" parent="."]
 layout_mode = 0
 offset_left = 1800.0
@@ -648,6 +2026,71 @@ horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
+[node name="Red Button" type="Button" parent="Card23"]
+visible = false
+offset_left = 72.4546
+offset_top = 81.4545
+offset_right = 167.455
+offset_bottom = 176.455
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("6_vj47y")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("5_5f2v4")
+
+[node name="Blue Button" type="Button" parent="Card23"]
+visible = false
+offset_left = 186.091
+offset_top = 83.7273
+offset_right = 281.091
+offset_bottom = 178.728
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("7_cr8sj")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("11_k5oq1")
+
+[node name="White Button" type="Button" parent="Card23"]
+visible = false
+offset_left = 302.0
+offset_top = 86.0
+offset_right = 397.0
+offset_bottom = 181.001
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("8_5tyjw")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("13_gy33p")
+
+[node name="Black Button" type="Button" parent="Card23"]
+visible = false
+offset_left = 417.909
+offset_top = 83.7273
+offset_right = 512.909
+offset_bottom = 178.728
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("9_2d2c2")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("15_f7fi4")
+
+[node name="Erase Button" type="Button" parent="Card23"]
+visible = false
+offset_left = 531.545
+offset_top = 83.7273
+offset_right = 626.546
+offset_bottom = 178.728
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+text = "DISABLE"
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("5_7h7fx")
+
 [node name="Card24" type="Button" parent="."]
 layout_mode = 0
 offset_left = 2577.0
@@ -669,6 +2112,71 @@ label_settings = ExtResource("5_7h7fx")
 horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
+
+[node name="Red Button" type="Button" parent="Card24"]
+visible = false
+offset_left = 72.4546
+offset_top = 81.4545
+offset_right = 167.455
+offset_bottom = 176.455
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("6_vj47y")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("5_5f2v4")
+
+[node name="Blue Button" type="Button" parent="Card24"]
+visible = false
+offset_left = 186.091
+offset_top = 83.7273
+offset_right = 281.091
+offset_bottom = 178.728
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("7_cr8sj")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("11_k5oq1")
+
+[node name="White Button" type="Button" parent="Card24"]
+visible = false
+offset_left = 302.0
+offset_top = 86.0
+offset_right = 397.0
+offset_bottom = 181.001
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("8_5tyjw")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("13_gy33p")
+
+[node name="Black Button" type="Button" parent="Card24"]
+visible = false
+offset_left = 417.909
+offset_top = 83.7273
+offset_right = 512.909
+offset_bottom = 178.728
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("9_2d2c2")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("15_f7fi4")
+
+[node name="Erase Button" type="Button" parent="Card24"]
+visible = false
+offset_left = 531.545
+offset_top = 83.7273
+offset_right = 626.546
+offset_bottom = 178.728
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+text = "DISABLE"
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("5_7h7fx")
 
 [node name="Card25" type="Button" parent="."]
 layout_mode = 0
@@ -692,6 +2200,71 @@ horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
+[node name="Red Button" type="Button" parent="Card25"]
+visible = false
+offset_left = 72.4546
+offset_top = 81.4545
+offset_right = 167.455
+offset_bottom = 176.455
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("6_vj47y")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("5_5f2v4")
+
+[node name="Blue Button" type="Button" parent="Card25"]
+visible = false
+offset_left = 186.091
+offset_top = 83.7273
+offset_right = 281.091
+offset_bottom = 178.728
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("7_cr8sj")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("11_k5oq1")
+
+[node name="White Button" type="Button" parent="Card25"]
+visible = false
+offset_left = 302.0
+offset_top = 86.0
+offset_right = 397.0
+offset_bottom = 181.001
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("8_5tyjw")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("13_gy33p")
+
+[node name="Black Button" type="Button" parent="Card25"]
+visible = false
+offset_left = 417.909
+offset_top = 83.7273
+offset_right = 512.909
+offset_bottom = 178.728
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+icon = ExtResource("9_2d2c2")
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("15_f7fi4")
+
+[node name="Erase Button" type="Button" parent="Card25"]
+visible = false
+offset_left = 531.545
+offset_top = 83.7273
+offset_right = 626.546
+offset_bottom = 178.728
+theme = SubResource("Theme_1o63o")
+toggle_mode = true
+text = "DISABLE"
+expand_icon = true
+script = ExtResource("7_auggp")
+label_setting = ExtResource("5_7h7fx")
+
 [node name="Timer" type="Timer" parent="."]
 one_shot = true
 autostart = true
@@ -701,21 +2274,5 @@ stream = ExtResource("5_kylop")
 volume_db = 1.0
 script = ExtResource("3_37h5g")
 
-[connection signal="toggled" from="Card1" to="Card1" method="_on_toggled"]
-[connection signal="toggled" from="Card1/Red Button" to="Card1/Red Button" method="_on_child_button_toggled"]
-[connection signal="update_color" from="Card1/Red Button" to="Card1" method="_on_button_update_color"]
-[connection signal="toggled" from="Card1/Blue Button" to="Card1/Blue Button" method="_on_child_button_toggled"]
-[connection signal="update_color" from="Card1/Blue Button" to="Card1" method="_on_button_update_color"]
-[connection signal="toggled" from="Card1/White Button" to="Card1/White Button" method="_on_child_button_toggled"]
-[connection signal="update_color" from="Card1/White Button" to="Card1" method="_on_button_update_color"]
-[connection signal="toggled" from="Card1/Black Button" to="Card1/Black Button" method="_on_child_button_toggled"]
-[connection signal="update_color" from="Card1/Black Button" to="Card1" method="_on_button_update_color"]
-[connection signal="toggled" from="Card1/Erase Button" to="Card1/Erase Button" method="_on_child_button_toggled"]
-[connection signal="update_color" from="Card1/Erase Button" to="Card1" method="_on_button_update_color"]
-[connection signal="pressed" from="Card2" to="Card2" method="_on_pressed"]
-[connection signal="pressed" from="Card3" to="Card3" method="_on_pressed"]
-[connection signal="pressed" from="Card4" to="Card4" method="_on_pressed"]
-[connection signal="pressed" from="Card5" to="Card5" method="_on_pressed"]
-[connection signal="pressed" from="Card6" to="Card6" method="_on_pressed"]
 [connection signal="pressed" from="Card25" to="Card25" method="_on_pressed"]
 [connection signal="timeout" from="Timer" to="AudioStreamPlayer" method="_on_timer_timeout"]

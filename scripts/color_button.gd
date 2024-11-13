@@ -4,9 +4,21 @@ signal update_color
 
 @export var label_setting: LabelSettings
 
-func _ready():
-	pass
+var parent: Button
 
-func _on_child_button_toggled(toggled_on):
+func _ready():
+	parent = get_parent() # Connect signals automatically
+	#print(parent.name)
+	
+	set_toggle_mode(true) # Make sure button is in toggle_mode
+	
+	# Top one doesn't work for some reason
+	#self.connect(str(self.toggled),Callable(self,"_on_toggled")) 
+	self.connect("pressed",Callable(self,"_on_pressed"))
+	
+	# Connects update_color to parent method
+	connect("update_color", Callable(parent,"_on_button_update_color"))
+
+func _on_pressed():
 	print("emitted child button")
 	emit_signal("update_color",label_setting)
