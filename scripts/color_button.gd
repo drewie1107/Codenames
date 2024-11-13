@@ -14,11 +14,11 @@ func _ready():
 	
 	# Top one doesn't work for some reason
 	#self.connect(str(self.toggled),Callable(self,"_on_toggled")) 
-	self.connect("pressed",Callable(self,"_on_pressed"))
+	#self.connect("pressed",Callable(self,"_on_pressed"))
 	
 	# Connects update_color to parent method
-	connect("update_color", Callable(parent,"_on_button_update_color"))
+	self.connect("pressed", Callable(parent,"_on_button_update_color").bind(label_setting))
 
-func _on_pressed():
-	print("emitted child button")
-	emit_signal("update_color",label_setting)
+#func _on_pressed():
+	#print("emitted child button")
+	#emit_signal("update_color",label_setting)

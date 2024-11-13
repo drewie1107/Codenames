@@ -1,9 +1,11 @@
-[gd_scene load_steps=20 format=3 uid="uid://cv481eo02q64o"]
+[gd_scene load_steps=22 format=3 uid="uid://cv481eo02q64o"]
 
 [ext_resource type="Texture2D" uid="uid://dsvejggx7mwvf" path="res://cards_layout_1.png" id="1_3oocm"]
 [ext_resource type="Script" path="res://scripts/Game.gd" id="2_ckwcx"]
+[ext_resource type="LabelSettings" uid="uid://cpy5ijuu7dn1b" path="res://label_settings_team_red.tres" id="3_3j4t6"]
 [ext_resource type="Script" path="res://scripts/AudioStreamPlayer.gd" id="3_37h5g"]
 [ext_resource type="Script" path="res://scripts/Button.gd" id="3_jx6nd"]
+[ext_resource type="LabelSettings" uid="uid://b7xjr0umt24rc" path="res://label_settings_team_blue.tres" id="4_hi76x"]
 [ext_resource type="LabelSettings" uid="uid://c5kxf23blrp6w" path="res://label_settings_red.tres" id="5_5f2v4"]
 [ext_resource type="LabelSettings" uid="uid://dnpn2uv5ja7gl" path="res://label_settings_default.tres" id="5_7h7fx"]
 [ext_resource type="AudioStream" uid="uid://d18kgumwh8aef" path="res://audio/Jeopardy Theme.mp3" id="5_kylop"]
@@ -24,7 +26,7 @@ Button/styles/normal = ExtResource("6_aev0w")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4ao02"]
 
-[node name="Node2D" type="TextureRect"]
+[node name="Map" type="TextureRect"]
 offset_left = -5.0
 offset_top = -100.0
 offset_right = 4381.0
@@ -32,6 +34,24 @@ offset_bottom = 2924.0
 scale = Vector2(0.44, 0.44)
 texture = ExtResource("1_3oocm")
 script = ExtResource("2_ckwcx")
+
+[node name="Red Team Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 31.8182
+offset_top = 411.364
+offset_right = 326.818
+offset_bottom = 1115.36
+text = "8"
+label_settings = ExtResource("3_3j4t6")
+
+[node name="Blue Team Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 22.7273
+offset_top = 984.091
+offset_right = 317.727
+offset_bottom = 1688.09
+text = "8"
+label_settings = ExtResource("4_hi76x")
 
 [node name="Drawing" type="Node2D" parent="."]
 z_index = 10
@@ -2274,5 +2294,4 @@ stream = ExtResource("5_kylop")
 volume_db = 1.0
 script = ExtResource("3_37h5g")
 
-[connection signal="pressed" from="Card25" to="Card25" method="_on_pressed"]
 [connection signal="timeout" from="Timer" to="AudioStreamPlayer" method="_on_timer_timeout"]

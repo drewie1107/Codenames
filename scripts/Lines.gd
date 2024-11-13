@@ -15,6 +15,7 @@ func _input(event: InputEvent) -> void:
 		
 	_click_data.append({"position": get_local_mouse_position(), "color": color}) # Horrible
 	queue_redraw()
+	print("running")
 
 func _draw() -> void:
 	for data in _click_data:
