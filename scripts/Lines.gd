@@ -9,6 +9,11 @@ var thickness = 20
 var filled = false
 var size = Vector2(700,400)
 
+signal whos_on_first
+
+func _ready():
+	connect("whos_on_first", Callable(get_parent(),"_update_score"))
+
 func _input(event: InputEvent) -> void:
 	if not Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) or disable:
 		return
@@ -26,9 +31,13 @@ func _draw() -> void:
 
 func _process(delta):
 	if Input.is_key_pressed(KEY_R):
+		get_parent().red_team_first = true
+		whos_on_first.emit()
 		color = Color.RED
 		thickness = 20
 	if Input.is_key_pressed(KEY_B):
+		get_parent().red_team_first = false
+		whos_on_first.emit()
 		color = Color.BLUE
 		thickness = 20
 	if Input.is_key_pressed(KEY_W):

@@ -4,7 +4,7 @@ const SAVE_PATH = "res://wordlist.cfg" # res://wordlist.cfg # unused
 
 @export var default_label_settings: LabelSettings
 
-@export var first_team: String = "red"
+@export var red_team_first: bool = true
 
 enum teams { Red, Blue}
 
@@ -98,7 +98,7 @@ func _update_cards(card_to_keep: String = "reset"):
 					button_child.label_settings = default_label_settings
 
 func _update_score(): 
-	if first_team == "red":
+	if red_team_first:
 		red_score = 9
 		blue_score = 8
 	else: 
