@@ -1,24 +1,25 @@
 extends Button
 
-signal update_color
-
 @export var label_setting: LabelSettings
 
 var parent: Button
+var root_node: Node
 
 func _ready():
+	root_node = get_tree().current_scene
 	parent = get_parent() # Connect signals automatically
-	#print(parent.name)
+	
+	var node_name: String = self.name.to_lower()
+	var button_color: String
+	
+	if "red" in node_name: button_color = "red"
+	if "blue" in node_name: button_color = "blue"
+	if "white" in node_name: button_color = "white"
+	if "black" in node_name: button_color = "black"
+	if "erase" in node_name: button_color = "erase"
 	
 	set_toggle_mode(true) # Make sure button is in toggle_mode
 	
-	# Top one doesn't work for some reason
-	#self.connect(str(self.toggled),Callable(self,"_on_toggled")) 
-	#self.connect("pressed",Callable(self,"_on_pressed"))
-	
-	# Connects update_color to parent method
-	self.connect("pressed", Callable(parent,"_on_button_update_color").bind(label_setting))
-
-#func _on_pressed():
-	#print("emitted child button")
-	#emit_signal("update_color",label_setting)
+	# Connects "pressed" signal to parent method to update color and root method to update score
+	self.connect("pressed", Callable(parent,"_on_button_update_color",).bind(label_setting))
+	self.connect("pressed", Callable(root_node,"_update_score"))
