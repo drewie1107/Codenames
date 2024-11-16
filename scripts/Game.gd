@@ -83,7 +83,7 @@ func _set_board():
 		elif child is Label and "blue" in child.name.to_lower():
 			blue_team_label = child
 			
-	print(text_array.size())
+	print(text_array.size()," words unused.")
 	_update_score()
 	print("reset board")
 
@@ -108,12 +108,10 @@ func _update_score():
 	for label in button_label_children:
 		if label.label_settings.font_color == red_team_label.label_settings.font_color:
 			num_red_cards += 1
-			print("red")
 		if label.label_settings.font_color == blue_team_label.label_settings.font_color:
 			num_blue_cards += 1
-			print("blue")
-	print("red count ",num_red_cards)
-	print("blue count ",num_blue_cards)
+	#print("red count ",num_red_cards)
+	#print("blue count ",num_blue_cards)
 	red_score -= num_red_cards
 	blue_score -= num_blue_cards
 	red_team_label.text = str(red_score)

@@ -10,9 +10,11 @@ var filled = false
 var size = Vector2(700,400)
 
 signal whos_on_first
+signal reset_colors
 
 func _ready():
 	connect("whos_on_first", Callable(get_parent(),"_update_score"))
+	connect("reset_colors", Callable(get_parent(),"_update_cards"))
 
 func _input(event: InputEvent) -> void:
 	if not Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) or disable:
@@ -20,7 +22,6 @@ func _input(event: InputEvent) -> void:
 		
 	_click_data.append({"position": get_local_mouse_position(), "color": color}) # Horrible
 	queue_redraw()
-	print("running")
 
 func _draw() -> void:
 	for data in _click_data:
@@ -47,8 +48,13 @@ func _process(delta):
 		color = Color.BLACK
 		thickness = 20
 	if Input.is_key_pressed(KEY_E):
+		reset_colors.emit("reset")
+		whos_on_first.emit()
+
 		#color = Color.TRANSPARENT
 		#thickness = 60
 		_click_data.clear()
 		queue_redraw()
-	
+	if Input.is_key_pressed(KEY_P):
+		if disable: disable = false
+		else: disable = true
