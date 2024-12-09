@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cxjoy585y0a4s"
-path="res://.godot/imported/Codenames_Icon.png-34efd4b878084c9b96e4838e2e8afe40.ctex"
+uid="uid://dsvejggx7mwvf"
+path="res://.godot/imported/cards_layout_1.png-755de872d68c52804c98fa30dd4eb9fa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Codenames_Icon.png"
-dest_files=["res://.godot/imported/Codenames_Icon.png-34efd4b878084c9b96e4838e2e8afe40.ctex"]
+source_file="res://images/cards_layout_1.png"
+dest_files=["res://.godot/imported/cards_layout_1.png-755de872d68c52804c98fa30dd4eb9fa.ctex"]
 
 [params]
 
@@ -31,4 +31,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0

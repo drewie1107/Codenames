@@ -11,9 +11,9 @@ config_version=5
 [application]
 
 config/name="Codenames Card Generator"
-run/main_scene="res://codenames_layout_1.tscn"
-config/features=PackedStringArray("4.3", "Forward Plus")
-config/icon="res://Codenames_Icon.png"
+run/main_scene="res://scenes/codenames_layout_1.tscn"
+config/features=PackedStringArray("4.3", "C#", "Forward Plus")
+config/icon="res://images/Codenames_Icon.png"
 
 [display]
 

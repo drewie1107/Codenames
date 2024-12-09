@@ -1,0 +1,250 @@
+[gd_scene load_steps=11 format=3 uid="uid://cv481eo02q64o"]
+
+[ext_resource type="Texture2D" uid="uid://dsvejggx7mwvf" path="res://images/cards_layout_1.png" id="1_k1el2"]
+[ext_resource type="Script" path="res://scripts/Game.gd" id="2_ddr4f"]
+[ext_resource type="LabelSettings" uid="uid://dnpn2uv5ja7gl" path="res://resources/label_settings_default.tres" id="3_eul3y"]
+[ext_resource type="LabelSettings" uid="uid://cpy5ijuu7dn1b" path="res://resources/label_settings_team_red.tres" id="4_p7ieo"]
+[ext_resource type="LabelSettings" uid="uid://b7xjr0umt24rc" path="res://resources/label_settings_team_blue.tres" id="5_5apxh"]
+[ext_resource type="Script" path="res://scripts/Messenger.cs" id="6_aeppi"]
+[ext_resource type="Script" path="res://scripts/Lines.gd" id="7_xsraa"]
+[ext_resource type="AudioStream" uid="uid://d18kgumwh8aef" path="res://audio/Jeopardy Theme.mp3" id="19_352gt"]
+[ext_resource type="Script" path="res://scripts/AudioStreamPlayer.gd" id="20_xw8pl"]
+[ext_resource type="PackedScene" uid="uid://ca6gski8kky3n" path="res://scenes/word_card.tscn" id="21_ea3jx"]
+
+[node name="Map" type="TextureRect"]
+offset_top = -111.0
+offset_right = 4386.0
+offset_bottom = 2913.0
+scale = Vector2(0.44, 0.44)
+texture = ExtResource("1_k1el2")
+script = ExtResource("2_ddr4f")
+default_label_settings = ExtResource("3_eul3y")
+
+[node name="Red Team Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 31.8182
+offset_top = 411.364
+offset_right = 326.818
+offset_bottom = 1115.36
+text = "8"
+label_settings = ExtResource("4_p7ieo")
+
+[node name="Blue Team Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 22.7273
+offset_top = 984.091
+offset_right = 317.727
+offset_bottom = 1688.09
+text = "8"
+label_settings = ExtResource("5_5apxh")
+
+[node name="Messenger" type="Node" parent="."]
+script = ExtResource("6_aeppi")
+
+[node name="Drawing" type="Node2D" parent="."]
+z_index = 10
+script = ExtResource("7_xsraa")
+disable = true
+
+[node name="Card1" parent="." instance=ExtResource("21_ea3jx")]
+layout_mode = 0
+offset_left = 338.636
+offset_top = 313.636
+offset_right = 1054.64
+offset_bottom = 738.636
+rotation = -0.0296706
+
+[node name="Card2" parent="." instance=ExtResource("21_ea3jx")]
+layout_mode = 0
+offset_left = 1075.0
+offset_top = 306.818
+offset_right = 1791.0
+offset_bottom = 731.818
+
+[node name="Card3" parent="." instance=ExtResource("21_ea3jx")]
+layout_mode = 0
+offset_left = 1813.64
+offset_top = 295.455
+offset_right = 2529.64
+offset_bottom = 720.455
+rotation = -0.00872665
+
+[node name="Card4" parent="." instance=ExtResource("21_ea3jx")]
+layout_mode = 0
+offset_left = 2581.82
+offset_top = 275.0
+offset_right = 3297.82
+offset_bottom = 700.0
+rotation = -0.0261799
+
+[node name="Card5" parent="." instance=ExtResource("21_ea3jx")]
+layout_mode = 0
+offset_left = 3325.0
+offset_top = 261.364
+offset_right = 4041.0
+offset_bottom = 686.364
+rotation = -0.00523599
+
+[node name="Card6" parent="." instance=ExtResource("21_ea3jx")]
+layout_mode = 0
+offset_left = 347.727
+offset_top = 777.273
+offset_right = 1063.73
+offset_bottom = 1202.27
+
+[node name="Card7" parent="." instance=ExtResource("21_ea3jx")]
+layout_mode = 0
+offset_left = 1088.64
+offset_top = 772.727
+offset_right = 1804.64
+offset_bottom = 1197.73
+
+[node name="Card8" parent="." instance=ExtResource("21_ea3jx")]
+layout_mode = 0
+offset_left = 1843.18
+offset_top = 772.727
+offset_right = 2559.18
+offset_bottom = 1197.73
+rotation = 0.00872665
+
+[node name="Card9" parent="." instance=ExtResource("21_ea3jx")]
+layout_mode = 0
+offset_left = 2600.0
+offset_top = 729.545
+offset_right = 3316.0
+offset_bottom = 1154.55
+rotation = -0.0261799
+
+[node name="Card10" parent="." instance=ExtResource("21_ea3jx")]
+layout_mode = 0
+offset_left = 3354.55
+offset_top = 709.091
+offset_right = 4070.55
+offset_bottom = 1134.09
+rotation = -0.0436332
+
+[node name="Card11" parent="." instance=ExtResource("21_ea3jx")]
+layout_mode = 0
+offset_left = 322.727
+offset_top = 1245.45
+offset_right = 1038.73
+offset_bottom = 1670.45
+
+[node name="Card12" parent="." instance=ExtResource("21_ea3jx")]
+layout_mode = 0
+offset_left = 1088.64
+offset_top = 1215.91
+offset_right = 1804.64
+offset_bottom = 1640.91
+rotation = 0.0523599
+
+[node name="Card13" parent="." instance=ExtResource("21_ea3jx")]
+layout_mode = 0
+offset_left = 1843.18
+offset_top = 1236.36
+offset_right = 2559.18
+offset_bottom = 1661.36
+rotation = -0.0174533
+
+[node name="Card14" parent="." instance=ExtResource("21_ea3jx")]
+layout_mode = 0
+offset_left = 2606.82
+offset_top = 1204.55
+offset_right = 3322.82
+offset_bottom = 1629.55
+rotation = -0.0349066
+
+[node name="Card15" parent="." instance=ExtResource("21_ea3jx")]
+layout_mode = 0
+offset_left = 3365.91
+offset_top = 1195.45
+offset_right = 4081.91
+offset_bottom = 1620.45
+rotation = 0.00523599
+
+[node name="Card16" parent="." instance=ExtResource("21_ea3jx")]
+layout_mode = 0
+offset_left = 318.182
+offset_top = 1713.64
+offset_right = 1034.18
+offset_bottom = 2138.64
+
+[node name="Card17" parent="." instance=ExtResource("21_ea3jx")]
+layout_mode = 0
+offset_left = 1061.36
+offset_top = 1681.82
+offset_right = 1777.36
+offset_bottom = 2106.82
+rotation = -0.00872665
+
+[node name="Card18" parent="." instance=ExtResource("21_ea3jx")]
+layout_mode = 0
+offset_left = 1815.91
+offset_top = 1679.55
+offset_right = 2531.91
+offset_bottom = 2104.55
+rotation = 0.020944
+
+[node name="Card19" parent="." instance=ExtResource("21_ea3jx")]
+layout_mode = 0
+offset_left = 2597.73
+offset_top = 1686.36
+offset_right = 3313.73
+offset_bottom = 2111.36
+rotation = -0.0261799
+
+[node name="Card20" parent="." instance=ExtResource("21_ea3jx")]
+layout_mode = 0
+offset_left = 3356.82
+offset_top = 1702.27
+offset_right = 4072.82
+offset_bottom = 2127.27
+rotation = -0.0436332
+
+[node name="Card21" parent="." instance=ExtResource("21_ea3jx")]
+layout_mode = 0
+offset_left = 297.727
+offset_top = 2175.0
+offset_right = 1013.73
+offset_bottom = 2600.0
+
+[node name="Card22" parent="." instance=ExtResource("21_ea3jx")]
+layout_mode = 0
+offset_left = 1038.64
+offset_top = 2168.18
+offset_right = 1754.64
+offset_bottom = 2593.18
+rotation = -0.00523599
+
+[node name="Card23" parent="." instance=ExtResource("21_ea3jx")]
+layout_mode = 0
+offset_left = 1804.55
+offset_top = 2154.55
+offset_right = 2520.55
+offset_bottom = 2579.55
+rotation = -0.0383972
+
+[node name="Card24" parent="." instance=ExtResource("21_ea3jx")]
+layout_mode = 0
+offset_left = 2579.55
+offset_top = 2163.64
+offset_right = 3295.55
+offset_bottom = 2588.64
+
+[node name="Card25" parent="." instance=ExtResource("21_ea3jx")]
+layout_mode = 0
+offset_left = 3361.36
+offset_top = 2168.18
+offset_right = 4077.36
+offset_bottom = 2593.18
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+autostart = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("19_352gt")
+volume_db = 1.0
+script = ExtResource("20_xw8pl")
+
+[connection signal="timeout" from="Timer" to="AudioStreamPlayer" method="_on_timer_timeout"]

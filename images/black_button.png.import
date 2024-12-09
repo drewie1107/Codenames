@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dsvejggx7mwvf"
-path="res://.godot/imported/cards_layout_1.png-0aaa8438f8f196182abb36a5fdf74776.ctex"
+uid="uid://dt4jex6wvadt4"
+path="res://.godot/imported/black_button.png-5209536a7977a92c3cbcce529df7ddab.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://cards_layout_1.png"
-dest_files=["res://.godot/imported/cards_layout_1.png-0aaa8438f8f196182abb36a5fdf74776.ctex"]
+source_file="res://images/black_button.png"
+dest_files=["res://.godot/imported/black_button.png-5209536a7977a92c3cbcce529df7ddab.ctex"]
 
 [params]
 
@@ -31,4 +31,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1

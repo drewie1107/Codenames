@@ -9,11 +9,11 @@ var thickness = 20
 var filled = false
 var size = Vector2(700,400)
 
-signal whos_on_first
+signal updates_the_scores
 signal reset_colors
 
 func _ready():
-	connect("whos_on_first", Callable(get_parent(),"_update_score"))
+	connect("updates_the_scores", Callable(get_parent(),"_update_score"))
 	connect("reset_colors", Callable(get_parent(),"_update_cards"))
 
 func _input(event: InputEvent) -> void:
@@ -33,12 +33,12 @@ func _draw() -> void:
 func _process(delta):
 	if Input.is_key_pressed(KEY_R):
 		get_parent().red_team_first = true
-		whos_on_first.emit()
+		updates_the_scores.emit()
 		color = Color.RED
 		thickness = 20
 	if Input.is_key_pressed(KEY_B):
 		get_parent().red_team_first = false
-		whos_on_first.emit()
+		updates_the_scores.emit()
 		color = Color.BLUE
 		thickness = 20
 	if Input.is_key_pressed(KEY_W):
@@ -49,12 +49,13 @@ func _process(delta):
 		thickness = 20
 	if Input.is_key_pressed(KEY_E):
 		reset_colors.emit("reset")
-		whos_on_first.emit()
+		updates_the_scores.emit()
 
 		#color = Color.TRANSPARENT
 		#thickness = 60
 		_click_data.clear()
 		queue_redraw()
+		
 	if Input.is_key_pressed(KEY_P):
 		if disable: disable = false
 		else: disable = true
