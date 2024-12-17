@@ -1,24 +1,33 @@
-[gd_scene load_steps=15 format=3 uid="uid://ca6gski8kky3n"]
+[gd_scene load_steps=24 format=3 uid="uid://ca6gski8kky3n"]
 
 [ext_resource type="Script" path="res://scripts/Button.gd" id="1_mkwst"]
 [ext_resource type="LabelSettings" uid="uid://dnpn2uv5ja7gl" path="res://resources/label_settings_default.tres" id="2_f6053"]
 [ext_resource type="StyleBox" uid="uid://bpnnrl7joqkkx" path="res://resources/default_button_style.tres" id="3_7owoo"]
 [ext_resource type="Texture2D" uid="uid://dh4r6kqui5kt1" path="res://images/red_button.png" id="4_p21vq"]
 [ext_resource type="Script" path="res://scripts/color_button.gd" id="5_bq46v"]
-[ext_resource type="LabelSettings" uid="uid://c5kxf23blrp6w" path="res://resources/label_settings_red.tres" id="6_g3tou"]
 [ext_resource type="Texture2D" uid="uid://cwjk4h48qjtw5" path="res://images/blue_button.png" id="7_fuq0c"]
-[ext_resource type="LabelSettings" uid="uid://cfjowlatplfgf" path="res://resources/label_settings_blue.tres" id="8_0hegl"]
 [ext_resource type="Texture2D" uid="uid://cx3cvtl2hn1w8" path="res://images/white_button.png" id="9_x53ne"]
-[ext_resource type="LabelSettings" uid="uid://bj6htyvvh0gdn" path="res://resources/label_settings_white.tres" id="10_xrbj4"]
 [ext_resource type="Texture2D" uid="uid://dt4jex6wvadt4" path="res://images/black_button.png" id="11_k3ivo"]
-[ext_resource type="LabelSettings" uid="uid://5oxg0amgatkf" path="res://resources/label_settings_loser.tres" id="12_8wal6"]
 [ext_resource type="Texture2D" uid="uid://dsvejggx7mwvf" path="res://images/cards_layout_1.png" id="13_yqcrx"]
+[ext_resource type="Texture2D" uid="uid://cjq8bp6lf8h6l" path="res://images/cards/assassin.png" id="14_ah2lo"]
+[ext_resource type="Texture2D" uid="uid://ijatgcy2otn5" path="res://images/cards/blue_man1.png" id="15_ogo3y"]
+[ext_resource type="Texture2D" uid="uid://dtv0865xfxrpp" path="res://images/cards/blue_man2.png" id="16_gc6qs"]
+[ext_resource type="Texture2D" uid="uid://difig072uj0ek" path="res://images/cards/blue_woman1.png" id="17_0rlq1"]
+[ext_resource type="Texture2D" uid="uid://co8qs5gji5305" path="res://images/cards/blue_woman2.png" id="18_c4cle"]
+[ext_resource type="Texture2D" uid="uid://dec20fwtyn736" path="res://images/cards/citizen_man1.png" id="19_yo7rh"]
+[ext_resource type="Texture2D" uid="uid://bb07fjsvuxd12" path="res://images/cards/citizen_man2.png" id="20_3pudk"]
+[ext_resource type="Texture2D" uid="uid://c8v7vebdwk5xp" path="res://images/cards/citizen_woman1.png" id="21_3m5ya"]
+[ext_resource type="Texture2D" uid="uid://kvf770hnndb" path="res://images/cards/citizen_woman2.png" id="22_n8ryg"]
+[ext_resource type="Texture2D" uid="uid://iyqi66jskrfg" path="res://images/cards/red_man1.png" id="23_i8l4n"]
+[ext_resource type="Texture2D" uid="uid://b4jc8d2v8jq2u" path="res://images/cards/red_man2.png" id="24_6r3ya"]
+[ext_resource type="Texture2D" uid="uid://dcc7guspyekbq" path="res://images/cards/red_woman1.png" id="25_cnsfk"]
+[ext_resource type="Texture2D" uid="uid://cbyfs2157arl2" path="res://images/cards/red_woman2.png" id="26_ws3q5"]
 
 [sub_resource type="Theme" id="Theme_1muoj"]
 default_font_size = 20
 Button/styles/normal = ExtResource("3_7owoo")
 
-[node name="Card1" type="Button"]
+[node name="Card" type="Button"]
 z_index = 2
 offset_right = 716.0
 offset_bottom = 425.0
@@ -27,7 +36,7 @@ toggle_mode = true
 flat = true
 script = ExtResource("1_mkwst")
 
-[node name="Label2" type="Label" parent="."]
+[node name="Label" type="Label" parent="."]
 z_index = 1
 layout_mode = 0
 offset_left = 68.0
@@ -42,7 +51,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
-[node name="Red Button2" type="Button" parent="."]
+[node name="Red Button" type="Button" parent="." node_paths=PackedStringArray("button_cards")]
 visible = false
 z_index = 3
 layout_mode = 0
@@ -55,9 +64,9 @@ toggle_mode = true
 icon = ExtResource("4_p21vq")
 expand_icon = true
 script = ExtResource("5_bq46v")
-label_setting = ExtResource("6_g3tou")
+button_cards = [NodePath("../Red Man1"), NodePath("../Red Man2"), NodePath("../Red Woman1"), NodePath("../Red Woman2")]
 
-[node name="Blue Button2" type="Button" parent="."]
+[node name="Blue Button" type="Button" parent="." node_paths=PackedStringArray("button_cards")]
 visible = false
 z_index = 3
 layout_mode = 0
@@ -70,9 +79,9 @@ toggle_mode = true
 icon = ExtResource("7_fuq0c")
 expand_icon = true
 script = ExtResource("5_bq46v")
-label_setting = ExtResource("8_0hegl")
+button_cards = [NodePath("../Blue Man1"), NodePath("../Blue Man2"), NodePath("../Blue Woman1"), NodePath("../Blue Woman2")]
 
-[node name="White Button2" type="Button" parent="."]
+[node name="White Button" type="Button" parent="." node_paths=PackedStringArray("button_cards")]
 visible = false
 z_index = 3
 layout_mode = 0
@@ -85,9 +94,9 @@ toggle_mode = true
 icon = ExtResource("9_x53ne")
 expand_icon = true
 script = ExtResource("5_bq46v")
-label_setting = ExtResource("10_xrbj4")
+button_cards = [NodePath("../Citizen Man1"), NodePath("../Citizen Man2"), NodePath("../Citizen Woman1"), NodePath("../Citizen Woman2")]
 
-[node name="Black Button2" type="Button" parent="."]
+[node name="Black Button" type="Button" parent="." node_paths=PackedStringArray("button_cards")]
 visible = false
 z_index = 3
 layout_mode = 0
@@ -100,9 +109,9 @@ toggle_mode = true
 icon = ExtResource("11_k3ivo")
 expand_icon = true
 script = ExtResource("5_bq46v")
-label_setting = ExtResource("12_8wal6")
+button_cards = [NodePath("../Assassin")]
 
-[node name="Erase Button2" type="Button" parent="."]
+[node name="Erase Button" type="Button" parent="."]
 visible = false
 z_index = 3
 layout_mode = 0
@@ -115,7 +124,6 @@ toggle_mode = true
 text = "DISABLE"
 expand_icon = true
 script = ExtResource("5_bq46v")
-label_setting = ExtResource("2_f6053")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 visible = false
@@ -126,3 +134,90 @@ offset_right = 2543.0
 offset_bottom = 2251.0
 texture = ExtResource("13_yqcrx")
 metadata/_edit_lock_ = true
+
+[node name="Red Man1" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(357.5, 213)
+scale = Vector2(0.501387, 0.441718)
+texture = ExtResource("23_i8l4n")
+
+[node name="Red Man2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(359.633, 211.4)
+rotation = -0.00872665
+scale = Vector2(0.449235, 0.397819)
+texture = ExtResource("24_6r3ya")
+
+[node name="Red Woman1" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(358.5, 213)
+scale = Vector2(0.503123, 0.450675)
+texture = ExtResource("25_cnsfk")
+
+[node name="Red Woman2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(358.81, 213.04)
+rotation = 0.0174533
+scale = Vector2(0.458716, 0.409046)
+texture = ExtResource("26_ws3q5")
+
+[node name="Blue Man1" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(360, 208)
+rotation = 0.0174533
+scale = Vector2(0.508512, 0.462694)
+texture = ExtResource("15_ogo3y")
+
+[node name="Blue Man2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(355, 215)
+rotation = 0.0261799
+scale = Vector2(0.40301, 0.368437)
+texture = ExtResource("16_gc6qs")
+
+[node name="Blue Woman1" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(357, 211)
+rotation = -0.00872665
+scale = Vector2(0.508728, 0.447314)
+texture = ExtResource("17_0rlq1")
+
+[node name="Blue Woman2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(358, 212)
+rotation = 0.00872665
+scale = Vector2(0.400742, 0.353506)
+texture = ExtResource("18_c4cle")
+
+[node name="Citizen Man1" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(355.685, 214.41)
+rotation = 0.020944
+scale = Vector2(0.417977, 0.373319)
+texture = ExtResource("19_yo7rh")
+
+[node name="Citizen Man2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(357.653, 211.067)
+rotation = 0.00523599
+scale = Vector2(0.355349, 0.315293)
+texture = ExtResource("20_3pudk")
+
+[node name="Citizen Woman1" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(359.274, 213.976)
+scale = Vector2(0.421867, 0.375218)
+texture = ExtResource("21_3m5ya")
+
+[node name="Citizen Woman2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(358.562, 213.558)
+rotation = 0.0174533
+scale = Vector2(0.367787, 0.331524)
+texture = ExtResource("22_n8ryg")
+
+[node name="Assassin" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(357, 209)
+scale = Vector2(0.372529, 0.337838)
+texture = ExtResource("14_ah2lo")

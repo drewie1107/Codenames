@@ -17,6 +17,7 @@ var time_since_last_reload: float = 0.0 # Used in _process for reloading
 var reload_codenames_cooldown_seconds = 0
 
 var node_children: Array[Node]
+var button_children: Array[Button]
 var button_label_children: Array[Label]
 var red_team_label: Label
 var blue_team_label: Label
@@ -26,6 +27,9 @@ var blue_score: int = 8
 
 var num_red_cards: int = 0
 var num_blue_cards: int = 0
+
+# Used to hide color buttons that aren't on the button currently selected by player
+signal hide_buttons 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -63,13 +67,14 @@ func _set_board():
 	for child in node_children:
 		# Check if the child is a Button
 		if child is Button and "card" in child.name.to_lower():
-			
+			button_children.append(child)
 			if text_array.size() < 25:
 				print("Deck has been used up. Resetting...")
 				config.load("wordlist.cfg")
 				text_array = config.get_value("Default_Words_Pack", "default_words_pack")
 				print(text_array.size())
-			# Get label settings from each color button
+				
+			# Give each label a random word from the list of words
 			for button_child in child.get_children():
 				if button_child is Label:
 					var random_index = randi() % text_array.size()
@@ -87,14 +92,14 @@ func _set_board():
 	_update_score()
 	print("reset board")
 
-func _update_cards(card_to_keep: String = "reset"):
+func _update_cards(button_selected: String = "reset"):
 	#print(card_to_keep)
 	for child in node_children:
-		if child is Button and child.name != card_to_keep:
+		if child is Button and child.name != button_selected:
 			for button_child in child.get_children():
 				if button_child is Button:
-					button_child.set_visible(false)
-				elif button_child is Label and card_to_keep == "reset":
+					button_child.set_visible(false) # Need to make sprites exempt
+				elif button_child is Label and button_selected == "reset":
 					button_child.label_settings = default_label_settings
 
 func _update_score(): 
@@ -104,14 +109,13 @@ func _update_score():
 	else: 
 		blue_score = 9
 		red_score = 8
-	#print(button_label_children)
-	for label in button_label_children:
-		if label.label_settings.font_color == red_team_label.label_settings.font_color:
+		
+	for button in button_children:
+		if button.current_color == "red":
 			num_red_cards += 1
-		if label.label_settings.font_color == blue_team_label.label_settings.font_color:
+		if button.current_color == "blue":
 			num_blue_cards += 1
-	#print("red count ",num_red_cards)
-	#print("blue count ",num_blue_cards)
+
 	red_score -= num_red_cards
 	blue_score -= num_blue_cards
 	red_team_label.text = str(red_score)

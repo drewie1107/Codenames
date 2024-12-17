@@ -49,9 +49,9 @@ disable = true
 [node name="Card1" parent="." instance=ExtResource("21_ea3jx")]
 layout_mode = 0
 offset_left = 338.636
-offset_top = 313.636
+offset_top = 304.545
 offset_right = 1054.64
-offset_bottom = 738.636
+offset_bottom = 729.545
 rotation = -0.0296706
 
 [node name="Card2" parent="." instance=ExtResource("21_ea3jx")]

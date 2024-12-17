@@ -1,12 +1,15 @@
 
 extends BaseButton
 
+var current_color: String = "default"
+
 var children: Array
 var root_node: Node
 
 var word_label: Label
 var labels: Array[Label]
 var buttons: Array[Button]
+
 var default_label: LabelSettings
 
 signal toggle_other_cards
@@ -34,8 +37,14 @@ func _on_toggled(toggled_on):
 	for button in buttons:
 		button.visible = !button.visible
 
-func _on_button_update_color(color: LabelSettings = default_label):
-	word_label.set_label_settings(color)
+func _update_button(color: String):
+	current_color = color
 	for button in buttons:
 		button.visible = !button.visible
 		button.button_pressed = false
+
+#func _on_button_apply_card(card: String = "erase"):
+	#if card = "red":
+		#
+	#var random_index: int = randi() % red_cards.size()
+	#red_cards[random_index].visible = !red_cards[random_index].visible
