@@ -18,9 +18,9 @@ var reload_codenames_cooldown_seconds = 0
 
 var node_children: Array[Node]
 var button_children: Array[Button]
-var button_label_children: Array[Label]
-var red_team_label: Label
-var blue_team_label: Label
+
+@export var red_team_label: Label
+@export var blue_team_label: Label
 
 var red_score: int = 8
 var blue_score: int = 8
@@ -28,8 +28,6 @@ var blue_score: int = 8
 var num_red_cards: int = 0
 var num_blue_cards: int = 0
 
-# Used to hide color buttons that aren't on the button currently selected by player
-signal hide_buttons 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -60,14 +58,13 @@ func _process(delta):
 
 func _set_board():
 	_update_cards("reset")
-	# Need to clear buton label children to stop it from appending
-	button_label_children.clear() 
-	
+	button_children.clear() # Need to clear button_children to stop it from appending
+
 	# Iterate through each child of TextureRect
-	for child in node_children:
+	for node_child in node_children:
 		# Check if the child is a Button
-		if child is Button and "card" in child.name.to_lower():
-			button_children.append(child)
+		if node_child is Button and "card" in node_child.name.to_lower():
+			button_children.append(node_child)
 			if text_array.size() < 25:
 				print("Deck has been used up. Resetting...")
 				config.load("wordlist.cfg")
@@ -75,32 +72,36 @@ func _set_board():
 				print(text_array.size())
 				
 			# Give each label a random word from the list of words
-			for button_child in child.get_children():
-				if button_child is Label:
-					var random_index = randi() % text_array.size()
-					button_child.text = text_array[random_index]
-					text_array.remove_at(random_index)
-					button_label_children.append(button_child)
+			for button in button_children:
+				for child in button.get_children():
+					if child is Label:
+						var random_index = randi() % text_array.size()
+						child.text = text_array[random_index]
+						text_array.remove_at(random_index)
 		
-		# Find red team label and blue team label
-		elif child is Label and "red" in child.name.to_lower():
-			red_team_label = child
-		elif child is Label and "blue" in child.name.to_lower():
-			blue_team_label = child
+		# Find red team label and blue team label if not assigned
+		elif node_child is Label and "red" in node_child.name.to_lower():
+			red_team_label = node_child
+		elif node_child is Label and "blue" in node_child.name.to_lower():
+			blue_team_label = node_child
 			
 	print(text_array.size()," words unused.")
 	_update_score()
 	print("reset board")
 
 func _update_cards(button_selected: String = "reset"):
+	var reset: bool = false
+	if button_selected == "reset": reset = true
+	else: reset = false
 	#print(card_to_keep)
-	for child in node_children:
-		if child is Button and child.name != button_selected:
-			for button_child in child.get_children():
-				if button_child is Button:
-					button_child.set_visible(false) # Need to make sprites exempt
-				elif button_child is Label and button_selected == "reset":
-					button_child.label_settings = default_label_settings
+	for button in button_children:
+		if button.name != button_selected:
+			if reset: button.current_color = "default"
+			for child in button.get_children():
+				if child is Button: child.set_visible(false) 
+				if child is Sprite2D and reset: 
+					child.set_visible(false)
+	if reset: _update_score()
 
 func _update_score(): 
 	if red_team_first:

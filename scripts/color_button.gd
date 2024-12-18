@@ -28,7 +28,7 @@ func _ready():
 	
 	# Connects "pressed" signal to parent method to update color and root method to update score
 	self.connect("pressed", Callable(self,"_select_card"))
-	self.connect("pressed", Callable(parent,"_update_button",).bind(color))
+	self.connect("pressed", Callable(parent,"_update_buttons",).bind(color))
 	#self.connect("pressed", Callable(parent,"_on_button_apply_card").bind())
 	self.connect("pressed", Callable(root_node,"_update_score"))
 	

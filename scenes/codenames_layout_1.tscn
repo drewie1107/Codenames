@@ -11,7 +11,7 @@
 [ext_resource type="Script" path="res://scripts/AudioStreamPlayer.gd" id="20_xw8pl"]
 [ext_resource type="PackedScene" uid="uid://ca6gski8kky3n" path="res://scenes/word_card.tscn" id="21_ea3jx"]
 
-[node name="Map" type="TextureRect"]
+[node name="Map" type="TextureRect" node_paths=PackedStringArray("red_team_label", "blue_team_label")]
 offset_top = -111.0
 offset_right = 4386.0
 offset_bottom = 2913.0
@@ -19,6 +19,8 @@ scale = Vector2(0.44, 0.44)
 texture = ExtResource("1_k1el2")
 script = ExtResource("2_ddr4f")
 default_label_settings = ExtResource("3_eul3y")
+red_team_label = NodePath("Red Team Label")
+blue_team_label = NodePath("Blue Team Label")
 
 [node name="Red Team Label" type="Label" parent="."]
 layout_mode = 0

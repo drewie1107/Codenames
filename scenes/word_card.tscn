@@ -137,12 +137,14 @@ metadata/_edit_lock_ = true
 
 [node name="Red Man1" type="Sprite2D" parent="."]
 visible = false
+z_index = 2
 position = Vector2(357.5, 213)
 scale = Vector2(0.501387, 0.441718)
 texture = ExtResource("23_i8l4n")
 
 [node name="Red Man2" type="Sprite2D" parent="."]
 visible = false
+z_index = 2
 position = Vector2(359.633, 211.4)
 rotation = -0.00872665
 scale = Vector2(0.449235, 0.397819)
@@ -150,12 +152,14 @@ texture = ExtResource("24_6r3ya")
 
 [node name="Red Woman1" type="Sprite2D" parent="."]
 visible = false
+z_index = 2
 position = Vector2(358.5, 213)
 scale = Vector2(0.503123, 0.450675)
 texture = ExtResource("25_cnsfk")
 
 [node name="Red Woman2" type="Sprite2D" parent="."]
 visible = false
+z_index = 2
 position = Vector2(358.81, 213.04)
 rotation = 0.0174533
 scale = Vector2(0.458716, 0.409046)
@@ -163,6 +167,7 @@ texture = ExtResource("26_ws3q5")
 
 [node name="Blue Man1" type="Sprite2D" parent="."]
 visible = false
+z_index = 2
 position = Vector2(360, 208)
 rotation = 0.0174533
 scale = Vector2(0.508512, 0.462694)
@@ -170,6 +175,7 @@ texture = ExtResource("15_ogo3y")
 
 [node name="Blue Man2" type="Sprite2D" parent="."]
 visible = false
+z_index = 2
 position = Vector2(355, 215)
 rotation = 0.0261799
 scale = Vector2(0.40301, 0.368437)
@@ -177,6 +183,7 @@ texture = ExtResource("16_gc6qs")
 
 [node name="Blue Woman1" type="Sprite2D" parent="."]
 visible = false
+z_index = 2
 position = Vector2(357, 211)
 rotation = -0.00872665
 scale = Vector2(0.508728, 0.447314)
@@ -184,6 +191,7 @@ texture = ExtResource("17_0rlq1")
 
 [node name="Blue Woman2" type="Sprite2D" parent="."]
 visible = false
+z_index = 2
 position = Vector2(358, 212)
 rotation = 0.00872665
 scale = Vector2(0.400742, 0.353506)
@@ -191,6 +199,7 @@ texture = ExtResource("18_c4cle")
 
 [node name="Citizen Man1" type="Sprite2D" parent="."]
 visible = false
+z_index = 2
 position = Vector2(355.685, 214.41)
 rotation = 0.020944
 scale = Vector2(0.417977, 0.373319)
@@ -198,6 +207,7 @@ texture = ExtResource("19_yo7rh")
 
 [node name="Citizen Man2" type="Sprite2D" parent="."]
 visible = false
+z_index = 2
 position = Vector2(357.653, 211.067)
 rotation = 0.00523599
 scale = Vector2(0.355349, 0.315293)
@@ -205,12 +215,14 @@ texture = ExtResource("20_3pudk")
 
 [node name="Citizen Woman1" type="Sprite2D" parent="."]
 visible = false
+z_index = 2
 position = Vector2(359.274, 213.976)
 scale = Vector2(0.421867, 0.375218)
 texture = ExtResource("21_3m5ya")
 
 [node name="Citizen Woman2" type="Sprite2D" parent="."]
 visible = false
+z_index = 2
 position = Vector2(358.562, 213.558)
 rotation = 0.0174533
 scale = Vector2(0.367787, 0.331524)
@@ -218,6 +230,7 @@ texture = ExtResource("22_n8ryg")
 
 [node name="Assassin" type="Sprite2D" parent="."]
 visible = false
+z_index = 2
 position = Vector2(357, 209)
 scale = Vector2(0.372529, 0.337838)
 texture = ExtResource("14_ah2lo")
