@@ -37,4 +37,5 @@ func _select_card():
 		if card.is_visible(): card.set_visible(false)
 	if button_cards.size() != 0:
 		random_card = button_cards[randi() % button_cards.size()]
+		if randi() % 2 == 0: random_card.flip_h = not random_card.flip_h
 		random_card.set_visible(true)

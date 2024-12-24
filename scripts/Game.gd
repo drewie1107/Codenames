@@ -2,15 +2,12 @@ extends TextureRect
 
 const SAVE_PATH = "res://wordlist.cfg" # res://wordlist.cfg # unused
 
-@export var default_label_settings: LabelSettings
-
 @export var red_team_first: bool = true
 
 enum teams { Red, Blue}
 
 var config: ConfigFile = ConfigFile.new()
 var text_array: Array = []
-
 const codenames_list: int = 25
 
 var time_since_last_reload: float = 0.0 # Used in _process for reloading

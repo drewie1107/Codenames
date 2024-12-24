@@ -1,8 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://cv481eo02q64o"]
+[gd_scene load_steps=10 format=3 uid="uid://cv481eo02q64o"]
 
 [ext_resource type="Texture2D" uid="uid://dsvejggx7mwvf" path="res://images/cards_layout_1.png" id="1_k1el2"]
 [ext_resource type="Script" path="res://scripts/Game.gd" id="2_ddr4f"]
-[ext_resource type="LabelSettings" uid="uid://dnpn2uv5ja7gl" path="res://resources/label_settings_default.tres" id="3_eul3y"]
 [ext_resource type="LabelSettings" uid="uid://cpy5ijuu7dn1b" path="res://resources/label_settings_team_red.tres" id="4_p7ieo"]
 [ext_resource type="LabelSettings" uid="uid://b7xjr0umt24rc" path="res://resources/label_settings_team_blue.tres" id="5_5apxh"]
 [ext_resource type="Script" path="res://scripts/Messenger.cs" id="6_aeppi"]
@@ -18,7 +17,6 @@ offset_bottom = 2913.0
 scale = Vector2(0.44, 0.44)
 texture = ExtResource("1_k1el2")
 script = ExtResource("2_ddr4f")
-default_label_settings = ExtResource("3_eul3y")
 red_team_label = NodePath("Red Team Label")
 blue_team_label = NodePath("Blue Team Label")
 
